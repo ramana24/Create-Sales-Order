@@ -1,0 +1,444 @@
+{
+    "_version": "1.15.0",
+    "sap.app": {
+        "id": "cus.sd.so.create.auto.xtrctns1",
+        "type": "application",
+        "i18n": "i18n/i18n.properties",
+        "applicationVersion": {
+            "version": "9.0.13"
+        },
+        "title": "{{appTitle}}",
+        "description": "{{appDescription}}",
+        "ach": "SD-SLS-IMP-DOX",
+        "dataSources": {
+            "mainService": {
+                "uri": "/sap/opu/odata4/sap/c_slsordreqfrmextsrc_srv/srvd/sap/c_slsordreqfrmextsource_sd/0001/",
+                "type": "OData",
+                "settings": {
+                    "annotations": [
+                        "annotation"
+                    ],
+                    "odataVersion": "4.0",
+                    "localUri": "localService/metadata.xml"
+                }
+            },
+            "annotation": {
+                "type": "ODataAnnotation",
+                "uri": "annotations/annotation.xml",
+                "settings": {
+                    "localUri": "annotations/annotation.xml"
+                }
+            }
+        },
+        "offline": false,
+        "resources": "resources.json",
+        "sourceTemplate": {
+            "id": "ui5template.fiorielements.v4.lrop",
+            "version": "1.0.0"
+        }
+    },
+    "sap.ui": {
+        "technology": "UI5",
+        "icons": {
+            "icon": "",
+            "favIcon": "",
+            "phone": "",
+            "phone@2": "",
+            "tablet": "",
+            "tablet@2": ""
+        },
+        "deviceTypes": {
+            "desktop": true,
+            "tablet": true,
+            "phone": true
+        }
+    },
+    "sap.ui5": {
+        "resources": {
+            "js": [],
+            "css": []
+        },
+        "componentUsages": {
+			"ChangeDocReuseComponent": {
+				"name": "sap.nw.core.changedocs.lib.reuse.changedocscomponent"
+            },
+            "ApplicationLogReuseComponent": {
+				"name": "sap.nw.core.applogs.lib.reuse.applogs"
+			}
+		},
+        "dependencies": {
+            "minUI5Version": "1.76.0",
+            "libs": {
+				"sap.ui.core": {
+					"lazy": false
+				},
+				"sap.m": {
+					"lazy": false
+				},
+				"sap.fe.templates": {
+					"lazy": false
+				},
+				"sap.fe.macros": {
+					"lazy": false
+				},
+				"sap.ui.fl": {
+					"lazy": true
+				},
+				"sap.ui.unified": {
+					"lazy": false
+				},
+				"sap.suite.ui.commons": {
+					"lazy": false
+				},
+				"sap.ui.layout": {
+					"lazy": false
+				},
+				"sap.ui.comp": {
+					"lazy": false
+				},
+				"sap.ui.table": {
+					"lazy": false
+				}
+			},
+			"components": {
+				"sap.nw.core.applogs.lib.reuse": {
+					"lazy": true
+				},
+				"sap.nw.core.changedocs.lib.reuse": {
+					"lazy": true
+				}
+			}
+        },
+        "models": {
+            "i18n": {
+                "type": "sap.ui.model.resource.ResourceModel",
+                "uri": "i18n/i18n.properties"
+            },
+            "": {
+                "dataSource": "mainService",
+                "preload": true,
+                "settings": {
+                    "synchronizationMode": "None",
+                    "operationMode": "Server",
+                    "autoExpandSelect": true,
+                    "earlyRequests": true
+                }
+            }
+        },
+        "routing": {
+            "config": {
+                "async": true
+            },
+            "routes": [{
+                    "pattern": ":?query:",
+                    "name": "SalesOrderRequestList",
+                    "target": "SalesOrderRequestList"
+                },
+                {
+                    "pattern": "SalesOrderRequest({key}):?query:",
+                    "name": "SalesOrderRequestObjectPage",
+                    "target": "SalesOrderRequestObjectPage"
+                }
+            ],
+            "targets": {
+                "SalesOrderRequestList": {
+                    "type": "Component",
+                    "id": "SalesOrderRequestList",
+                    "name": "sap.fe.templates.ListReport",
+                    "options": {
+                        "settings": {
+                            "entitySet": "SalesOrderRequest",
+                            "variantManagement": "Page",
+                            "enhanceI18n": "i18n/customSalesOrderRequestLR.properties",
+                            "navigation": {
+                                "SalesOrderRequest": {
+                                    "detail": {
+                                        "route": "SalesOrderRequestObjectPage"
+                                    }
+                                }
+                            },
+                            "controlConfiguration": {
+                                "@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "columns": {
+                                        "CustomColumnOnListReport": {
+                                            "header": "{i18n>microProcessingColumnTitle}",
+                                            "position": {
+                                                "placement": "After",
+                                                "anchor": "DataField::SalesOrderRequestFileName"
+                                            },
+                                            "template": "cus.sd.so.create.auto.xtrctns1.ext.Fragments.ListColumn"
+                                        },
+                                        "DataField::ExtractedShipToPartyCityName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPartyCityName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::SoldToPartyCityName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ShipToPartyCityName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ShipToPartyCountryName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::SoldToPartyCountryName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPtyCountryName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedShipToPtyCountryName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::CurrencyISOCode": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::TransactionCurrency": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPtyHouseNumber": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedShipToPtyHouseNumber": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::SoldToPartyHouseNumber": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ShipToPartyHouseNumber": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedShipToPartyPostalCode": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPartyPostalCode": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::SoldToPartyPostalCode": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ShipToPartyPostalCode": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedShipToPartyStreetName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPartyStreetName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::SoldToPartyStreetName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ShipToPartyStreetName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::UploadFileContentBinary": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPartyTaxNumber": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPtyBankAccount": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::CustomerTotalNetAmount": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedRequestedDeliveryDate": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::CustomerIncotermsText": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::CustomerPaymentTermsText": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ProcessingStatusDesc": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedShipToPartyName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedShipToPtyAddlName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::TotalNetAmount": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPartyName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPtyAddlName": {
+                                            "availability": "Hidden"
+                                        },
+                                        "DataField::ExtractedSoldToPtyTaxRegNumber": {
+                                            "availability": "Hidden"
+                                        }
+                                    },
+                                    "tableSettings": {
+                                        "selectionMode": "Single",
+                                        "enableExport": false,
+                                        "showCounts": true,
+                                        "initialLoad": false,
+                                        "type": "ResponsiveTable",
+                                        "personalization": {
+                                        	"column": true,
+                                        	"sort": true,
+								            "filter": true
+								        },
+                                        "quickVariantSelection": {
+                                            "paths": [{
+                                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#All"
+                                                },
+                                                {
+                                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#InProcess"
+                                                },
+                                                {
+                                                    "annotationPath": "com.sap.vocabularies.UI.v1.SelectionVariant#Completed"
+                                                }
+                                            ],
+                                            "hideTableTitle": false,
+                                            "showCounts": false
+                                        }
+                                    },
+                                    "actions": {
+                                        "uploadFile": {
+                                            "press": "cus.sd.so.create.auto.xtrctns1.ext.controller.UploadController.onPressUploadFile",
+                                            "text": "{i18n>fileUpldVw_action}",
+                                            "enabled": true,
+                                            "visible": true,
+                                            "position": {
+                                                "placement": "Before",
+                                                "anchor": "DataFieldForAction::com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.AnalyzeFileContent::com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"
+                                            }
+                                        }
+                                    }
+                                }
+                            }
+                        }
+                    }
+                },
+                "SalesOrderRequestObjectPage": {
+                    "type": "Component",
+                    "id": "SalesOrderRequestObjectPage",
+                    "name": "sap.fe.templates.ObjectPage",
+                    "options": {
+                        "settings": {
+                            "prepareOnEdit": true,
+                            "entitySet": "SalesOrderRequest",
+                            "enhanceI18n": "i18n/ObjectPage.properties",
+                            "sectionLayout": "Tabs",
+                            "editableHeaderContent": false,
+                            "variantManagement": "Control",
+                            "controlConfiguration": {
+                                "_Item/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "columns": {
+                                        "DataField::RequestedQuantityUnit": {
+                                            "availability": "Hidden"
+                                        }
+                                    },
+                                    "tableSettings": {
+                                        "personalization": true,
+                                        "selectionMode": "Single",
+                                        "enableExport": false,
+                                        "enablePaste": false,
+                                        "creationMode": {
+                                            "name": "Inline",
+                                            "createAtEnd": false
+                                        }
+                                    }
+                                },
+                                "_DerivedItem/@com.sap.vocabularies.UI.v1.LineItem": {
+                                    "columns": {
+                                        "DataField::RequestedQuantityUnit": {
+                                            "availability": "Hidden"
+                                        }
+                                    },
+                                    "tableSettings": {
+                                        "personalization": true,
+                                        "selectionMode": "None",
+                                        "enableExport": false,
+                                        "enablePaste": false,
+                                        "creationMode": {
+                                            "name": "Inline",
+                                            "createAtEnd": false
+                                        }
+                                    }
+                                }
+                            },
+                            "content": {
+                                "header": {
+                                    "facets": {
+                                        "CustomizedSimulatedNetValueFacet": {
+                                            "type": "XMLFragment",
+                                            "name": "cus.sd.so.create.auto.xtrctns1.ext.Fragments.SimulatedNetValueFacetDataPoint",
+                                            "stashed": false,
+                                            "position": {
+                                                "placement": "After",
+                                                "anchor": "NetValueDataHeader"
+                                            }
+                                        }
+                                    },
+                                    "actions": {
+										"ApplicationLog": {
+											"press": "cus.sd.so.create.auto.xtrctns1.ext.controller.ApplicationLogController.onPressShowLog",
+											"visible": true,
+											"enabled": true,
+											"text": "{i18n>diplayApplicationLogBtnLabel}",
+											"position": {
+												"placement": "Afer",
+												"anchor": "DataFieldForAction::com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SimulateFollowOnSalesOrder::com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"
+											}
+										},
+										"ChangeDoc": {
+											"press": "cus.sd.so.create.auto.xtrctns1.ext.controller.ChangeDocController.onPressShowChangeDoc",
+											"visible": true,
+											"enabled": true,
+											"text": "{i18n>displayChangeDocBtnLabel}",
+											"position": {
+												"placement": "Afer",
+												"anchor": "ApplicationLog"
+											}
+										}
+									}
+                                }
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        "extends": {
+            "extensions": {
+                "sap.ui.controllerExtensions": {
+                    "sap.fe.templates.ListReport.ListReportController": {
+                        "controllerName": "cus.sd.so.create.auto.xtrctns1.ext.controller.LRExtend"
+                    },
+					"sap.fe.templates.ObjectPage.ObjectPageController": {
+						"controllerName": "cus.sd.so.create.auto.xtrctns1.ext.controller.OPExtend"
+					}
+                }
+            }
+        },
+        "contentDensities": {
+            "compact": true,
+            "cozy": true
+        },
+         "flexEnabled": true
+    },
+    "sap.platform.abap": {
+        "_version": "1.1.0",
+        "uri": ""
+    },
+    "sap.platform.hcp": {
+        "_version": "1.1.0",
+        "uri": ""
+    },
+    "sap.fiori": {
+        "_version": "1.1.0",
+        "registrationIds": ["F4920"],
+        "archeType": "transactional"
+    }
+}

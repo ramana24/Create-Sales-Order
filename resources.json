@@ -1,0 +1,1667 @@
+{
+	"_version": "1.1.0",
+	"resources": [
+		{
+			"name": "Component-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/Component.js",
+			"size": 327,
+			"isDebug": true,
+			"required": [
+				"sap/fe/core/AppComponent.js"
+			]
+		},
+		{
+			"name": "Component-h2-preload-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/Component-h2-preload.js",
+			"size": 11525,
+			"isDebug": true,
+			"merged": true,
+			"required": [
+				"sap/fe/core/AppComponent.js",
+				"sap/fe/macros/DelegateUtil.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Page.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/suite/ui/commons/MicroProcessFlow.js",
+				"sap/suite/ui/commons/MicroProcessFlowItem.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/mvc/ControllerExtension.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ui/unified/FileUploader.js"
+			],
+			"included": [
+				"cus/sd/so/create/auto/xtrctns1/Component.js",
+				"cus/sd/so/create/auto/xtrctns1/manifest.json",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ApplicationLog.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ChangeDoc.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/FileUploadDialog.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ListColumn.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/SimulatedNetValueFacetDataPoint.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/LRExtend.controller.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtend.controller.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_TW.properties"
+			]
+		},
+		{
+			"name": "Component-h2-preload.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/Component-h2-preload.js",
+			"size": 11436,
+			"merged": true,
+			"required": [
+				"sap/fe/core/AppComponent.js",
+				"sap/fe/macros/DelegateUtil.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Page.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/suite/ui/commons/MicroProcessFlow.js",
+				"sap/suite/ui/commons/MicroProcessFlowItem.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/mvc/ControllerExtension.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ui/unified/FileUploader.js"
+			],
+			"included": [
+				"cus/sd/so/create/auto/xtrctns1/Component.js",
+				"cus/sd/so/create/auto/xtrctns1/manifest.json",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ApplicationLog.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ChangeDoc.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/FileUploadDialog.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ListColumn.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/SimulatedNetValueFacetDataPoint.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/LRExtend.controller.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtend.controller.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_TW.properties"
+			]
+		},
+		{
+			"name": "Component-preload.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/Component-preload.js",
+			"size": 384308,
+			"merged": true,
+			"required": [
+				"sap/fe/core/AppComponent.js",
+				"sap/fe/macros/DelegateUtil.js",
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Page.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/suite/ui/commons/MicroProcessFlow.js",
+				"sap/suite/ui/commons/MicroProcessFlowItem.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/core/format/NumberFormat.js",
+				"sap/ui/core/library.js",
+				"sap/ui/core/mvc/ControllerExtension.js",
+				"sap/ui/layout/VerticalLayout.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/model/resource/ResourceModel.js",
+				"sap/ui/unified/FileUploader.js"
+			],
+			"included": [
+				"cus/sd/so/create/auto/xtrctns1/Component.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ApplicationLog.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ChangeDoc.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/FileUploadDialog.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/ListColumn.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/Fragments/SimulatedNetValueFacetDataPoint.fragment.xml",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/LRExtend.controller.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtend.controller.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ar.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_bg.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ca.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_cs.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_da.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_de.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_el.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_sappsd.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_saptrc.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_es.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_et.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_fi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_fr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_hu.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_it.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_iw.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ja.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_kk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ko.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_lt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_lv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ms.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_nl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_no.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_pl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_pt.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ro.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_ru.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sh.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sl.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_sv.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_th.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_tr.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_uk.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_vi.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_CN.properties",
+				"cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_TW.properties",
+				"cus/sd/so/create/auto/xtrctns1/manifest.json"
+			]
+		},
+		{
+			"name": "Component.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/Component.js",
+			"size": 252,
+			"required": [
+				"sap/fe/core/AppComponent.js"
+			]
+		},
+		{
+			"name": "annotations/annotation.xml",
+			"size": 14308
+		},
+		{
+			"name": "ext/Fragments/ApplicationLog.fragment.xml",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/Fragments/ApplicationLog.fragment.xml",
+			"size": 577,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Page.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/Fragments/ChangeDoc.fragment.xml",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/Fragments/ChangeDoc.fragment.xml",
+			"size": 507,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/ui/core/ComponentContainer.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/Fragments/FileUploadDialog.fragment.xml",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/Fragments/FileUploadDialog.fragment.xml",
+			"size": 2423,
+			"required": [
+				"sap/m/Button.js",
+				"sap/m/Dialog.js",
+				"sap/m/Label.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/unified/FileUploader.js"
+			]
+		},
+		{
+			"name": "ext/Fragments/ListColumn.fragment.xml",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/Fragments/ListColumn.fragment.xml",
+			"size": 1449,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController.js",
+				"sap/suite/ui/commons/MicroProcessFlow.js",
+				"sap/suite/ui/commons/MicroProcessFlowItem.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/layout/VerticalLayout.js"
+			]
+		},
+		{
+			"name": "ext/Fragments/SimulatedNetValueFacetDataPoint.fragment.xml",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/Fragments/SimulatedNetValueFacetDataPoint.fragment.xml",
+			"size": 1039,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController.js",
+				"sap/m/ObjectNumber.js",
+				"sap/m/Title.js",
+				"sap/m/VBox.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/controller/ApplicationLogController-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+			"size": 1881,
+			"isDebug": true,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/controller/ApplicationLogController.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+			"size": 1117,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/controller/ChangeDocController-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+			"size": 1918,
+			"isDebug": true,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/controller/ChangeDocController.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+			"size": 1328,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+				"sap/ui/core/Fragment.js"
+			]
+		},
+		{
+			"name": "ext/controller/LRExtend-dbg.controller.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/LRExtend.controller.js",
+			"size": 3108,
+			"isDebug": true,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "ext/controller/LRExtend.controller.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/LRExtend.controller.js",
+			"size": 936,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "ext/controller/MicroProcessController-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController.js",
+			"size": 6967,
+			"isDebug": true,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/suite/ui/commons/MicroProcessFlow.js",
+				"sap/suite/ui/commons/MicroProcessFlowItem.js",
+				"sap/ui/core/library.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "ext/controller/MicroProcessController.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController.js",
+			"size": 4088,
+			"required": [
+				"sap/m/MessageBox.js",
+				"sap/suite/ui/commons/MicroProcessFlow.js",
+				"sap/suite/ui/commons/MicroProcessFlowItem.js",
+				"sap/ui/core/library.js",
+				"sap/ui/model/resource/ResourceModel.js"
+			]
+		},
+		{
+			"name": "ext/controller/OPExtController-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController.js",
+			"size": 970,
+			"isDebug": true,
+			"required": [
+				"sap/ui/core/format/NumberFormat.js"
+			]
+		},
+		{
+			"name": "ext/controller/OPExtController.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController.js",
+			"size": 528,
+			"required": [
+				"sap/ui/core/format/NumberFormat.js"
+			]
+		},
+		{
+			"name": "ext/controller/OPExtend-dbg.controller.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtend.controller.js",
+			"size": 2852,
+			"isDebug": true,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "ext/controller/OPExtend.controller.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtend.controller.js",
+			"size": 1195,
+			"required": [
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ApplicationLogController.js",
+				"cus/sd/so/create/auto/xtrctns1/ext/controller/ChangeDocController.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/mvc/ControllerExtension.js"
+			]
+		},
+		{
+			"name": "ext/controller/UploadController-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+			"size": 19156,
+			"isDebug": true,
+			"required": [
+				"sap/fe/macros/DelegateUtil.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/unified/FileUploader.js"
+			]
+		},
+		{
+			"name": "ext/controller/UploadController.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController.js",
+			"size": 7676,
+			"required": [
+				"sap/fe/macros/DelegateUtil.js",
+				"sap/m/MessageBox.js",
+				"sap/m/MessageToast.js",
+				"sap/ui/core/Fragment.js",
+				"sap/ui/model/json/JSONModel.js",
+				"sap/ui/unified/FileUploader.js"
+			]
+		},
+		{
+			"name": "ext/controller/Utils-dbg.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+			"size": 446,
+			"isDebug": true
+		},
+		{
+			"name": "ext/controller/Utils.js",
+			"module": "cus/sd/so/create/auto/xtrctns1/ext/controller/Utils.js",
+			"size": 221
+		},
+		{
+			"name": "i18n/ObjectPage.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage.properties",
+			"size": 2403,
+			"locale": "",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ar.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ar.properties",
+			"size": 3680,
+			"locale": "ar",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_bg.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_bg.properties",
+			"size": 4918,
+			"locale": "bg",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ca.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ca.properties",
+			"size": 2578,
+			"locale": "ca",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_cs.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_cs.properties",
+			"size": 2682,
+			"locale": "cs",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_da.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_da.properties",
+			"size": 2280,
+			"locale": "da",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_de.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_de.properties",
+			"size": 2599,
+			"locale": "de",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_el.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_el.properties",
+			"size": 4290,
+			"locale": "el",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_en.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en.properties",
+			"size": 2243,
+			"locale": "en",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_en_US_sappsd.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_sappsd.properties",
+			"size": 4910,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_en_US_saptrc.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_en_US_saptrc.properties",
+			"size": 2608,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_es.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_es.properties",
+			"size": 2535,
+			"locale": "es",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_et.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_et.properties",
+			"size": 2491,
+			"locale": "et",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_fi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fi.properties",
+			"size": 2370,
+			"locale": "fi",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_fr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_fr.properties",
+			"size": 2458,
+			"locale": "fr",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_hi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hi.properties",
+			"size": 3886,
+			"locale": "hi",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_hr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hr.properties",
+			"size": 2371,
+			"locale": "hr",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_hu.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_hu.properties",
+			"size": 2687,
+			"locale": "hu",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_it.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_it.properties",
+			"size": 2402,
+			"locale": "it",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_iw.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_iw.properties",
+			"size": 3575,
+			"locale": "iw",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ja.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ja.properties",
+			"size": 2851,
+			"locale": "ja",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_kk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_kk.properties",
+			"size": 4530,
+			"locale": "kk",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ko.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ko.properties",
+			"size": 2988,
+			"locale": "ko",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_lt.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lt.properties",
+			"size": 2565,
+			"locale": "lt",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_lv.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_lv.properties",
+			"size": 2914,
+			"locale": "lv",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ms.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ms.properties",
+			"size": 2313,
+			"locale": "ms",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_nl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_nl.properties",
+			"size": 2300,
+			"locale": "nl",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_no.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_no.properties",
+			"size": 2393,
+			"locale": "no",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_pl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pl.properties",
+			"size": 2587,
+			"locale": "pl",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_pt.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_pt.properties",
+			"size": 2563,
+			"locale": "pt",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ro.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ro.properties",
+			"size": 2678,
+			"locale": "ro",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_ru.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_ru.properties",
+			"size": 4295,
+			"locale": "ru",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_sh.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sh.properties",
+			"size": 2376,
+			"locale": "sh",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_sk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sk.properties",
+			"size": 2676,
+			"locale": "sk",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_sl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sl.properties",
+			"size": 2451,
+			"locale": "sl",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_sv.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_sv.properties",
+			"size": 2344,
+			"locale": "sv",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_th.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_th.properties",
+			"size": 3759,
+			"locale": "th",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_tr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_tr.properties",
+			"size": 2504,
+			"locale": "tr",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_uk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_uk.properties",
+			"size": 4565,
+			"locale": "uk",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_vi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_vi.properties",
+			"size": 2766,
+			"locale": "vi",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_zh_CN.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_CN.properties",
+			"size": 2697,
+			"locale": "zh_CN",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/ObjectPage_zh_TW.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/ObjectPage_zh_TW.properties",
+			"size": 2697,
+			"locale": "zh_TW",
+			"raw": "i18n/ObjectPage.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR.properties",
+			"size": 839,
+			"locale": "",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ar.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ar.properties",
+			"size": 1141,
+			"locale": "ar",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_bg.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_bg.properties",
+			"size": 1503,
+			"locale": "bg",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ca.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ca.properties",
+			"size": 773,
+			"locale": "ca",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_cs.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_cs.properties",
+			"size": 820,
+			"locale": "cs",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_da.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_da.properties",
+			"size": 689,
+			"locale": "da",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_de.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_de.properties",
+			"size": 805,
+			"locale": "de",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_el.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_el.properties",
+			"size": 1311,
+			"locale": "el",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_en.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en.properties",
+			"size": 689,
+			"locale": "en",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_en_US_sappsd.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_sappsd.properties",
+			"size": 1617,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_en_US_saptrc.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_en_US_saptrc.properties",
+			"size": 837,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_es.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_es.properties",
+			"size": 761,
+			"locale": "es",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_et.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_et.properties",
+			"size": 769,
+			"locale": "et",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_fi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fi.properties",
+			"size": 721,
+			"locale": "fi",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_fr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_fr.properties",
+			"size": 755,
+			"locale": "fr",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_hi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hi.properties",
+			"size": 1209,
+			"locale": "hi",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_hr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hr.properties",
+			"size": 733,
+			"locale": "hr",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_hu.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_hu.properties",
+			"size": 880,
+			"locale": "hu",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_it.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_it.properties",
+			"size": 733,
+			"locale": "it",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_iw.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_iw.properties",
+			"size": 1089,
+			"locale": "iw",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ja.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ja.properties",
+			"size": 871,
+			"locale": "ja",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_kk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_kk.properties",
+			"size": 1367,
+			"locale": "kk",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ko.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ko.properties",
+			"size": 907,
+			"locale": "ko",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_lt.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lt.properties",
+			"size": 785,
+			"locale": "lt",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_lv.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_lv.properties",
+			"size": 904,
+			"locale": "lv",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ms.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ms.properties",
+			"size": 709,
+			"locale": "ms",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_nl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_nl.properties",
+			"size": 711,
+			"locale": "nl",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_no.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_no.properties",
+			"size": 715,
+			"locale": "no",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_pl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pl.properties",
+			"size": 793,
+			"locale": "pl",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_pt.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_pt.properties",
+			"size": 793,
+			"locale": "pt",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ro.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ro.properties",
+			"size": 821,
+			"locale": "ro",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_ru.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_ru.properties",
+			"size": 1279,
+			"locale": "ru",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_sh.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sh.properties",
+			"size": 729,
+			"locale": "sh",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_sk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sk.properties",
+			"size": 825,
+			"locale": "sk",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_sl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sl.properties",
+			"size": 751,
+			"locale": "sl",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_sv.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_sv.properties",
+			"size": 707,
+			"locale": "sv",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_th.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_th.properties",
+			"size": 1087,
+			"locale": "th",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_tr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_tr.properties",
+			"size": 761,
+			"locale": "tr",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_uk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_uk.properties",
+			"size": 1399,
+			"locale": "uk",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_vi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_vi.properties",
+			"size": 849,
+			"locale": "vi",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_zh_CN.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_CN.properties",
+			"size": 833,
+			"locale": "zh_CN",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/customSalesOrderRequestLR_zh_TW.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/customSalesOrderRequestLR_zh_TW.properties",
+			"size": 833,
+			"locale": "zh_TW",
+			"raw": "i18n/customSalesOrderRequestLR.properties"
+		},
+		{
+			"name": "i18n/i18n.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n.properties",
+			"size": 5871,
+			"locale": "",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ar.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ar.properties",
+			"size": 11006,
+			"locale": "ar",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_bg.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_bg.properties",
+			"size": 12914,
+			"locale": "bg",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ca.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ca.properties",
+			"size": 6302,
+			"locale": "ca",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_cs.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_cs.properties",
+			"size": 6571,
+			"locale": "cs",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_da.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_da.properties",
+			"size": 5899,
+			"locale": "da",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_de.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_de.properties",
+			"size": 6436,
+			"locale": "de",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_el.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_el.properties",
+			"size": 13017,
+			"locale": "el",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_en.properties",
+			"size": 5752,
+			"locale": "en",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_sappsd.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_sappsd.properties",
+			"size": 15438,
+			"locale": "en_US_sappsd",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_en_US_saptrc.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_en_US_saptrc.properties",
+			"size": 6874,
+			"locale": "en_US_saptrc",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_es.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_es.properties",
+			"size": 6213,
+			"locale": "es",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_et.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_et.properties",
+			"size": 6110,
+			"locale": "et",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_fi.properties",
+			"size": 6326,
+			"locale": "fi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_fr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_fr.properties",
+			"size": 6577,
+			"locale": "fr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_hi.properties",
+			"size": 11978,
+			"locale": "hi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_hr.properties",
+			"size": 6190,
+			"locale": "hr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_hu.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_hu.properties",
+			"size": 6796,
+			"locale": "hu",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_it.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_it.properties",
+			"size": 6021,
+			"locale": "it",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_iw.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_iw.properties",
+			"size": 9675,
+			"locale": "iw",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ja.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ja.properties",
+			"size": 8504,
+			"locale": "ja",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_kk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_kk.properties",
+			"size": 12115,
+			"locale": "kk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ko.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ko.properties",
+			"size": 7920,
+			"locale": "ko",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lt.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_lt.properties",
+			"size": 6436,
+			"locale": "lt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_lv.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_lv.properties",
+			"size": 6702,
+			"locale": "lv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ms.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ms.properties",
+			"size": 5833,
+			"locale": "ms",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_nl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_nl.properties",
+			"size": 5970,
+			"locale": "nl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_no.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_no.properties",
+			"size": 5961,
+			"locale": "no",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_pl.properties",
+			"size": 6351,
+			"locale": "pl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_pt.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_pt.properties",
+			"size": 6247,
+			"locale": "pt",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ro.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ro.properties",
+			"size": 6416,
+			"locale": "ro",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_ru.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_ru.properties",
+			"size": 12612,
+			"locale": "ru",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sh.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_sh.properties",
+			"size": 6054,
+			"locale": "sh",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_sk.properties",
+			"size": 6498,
+			"locale": "sk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sl.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_sl.properties",
+			"size": 6130,
+			"locale": "sl",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_sv.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_sv.properties",
+			"size": 6032,
+			"locale": "sv",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_th.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_th.properties",
+			"size": 11923,
+			"locale": "th",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_tr.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_tr.properties",
+			"size": 6661,
+			"locale": "tr",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_uk.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_uk.properties",
+			"size": 12514,
+			"locale": "uk",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_vi.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_vi.properties",
+			"size": 8500,
+			"locale": "vi",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_CN.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_CN.properties",
+			"size": 6883,
+			"locale": "zh_CN",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "i18n/i18n_zh_TW.properties",
+			"module": "cus/sd/so/create/auto/xtrctns1/i18n/i18n_zh_TW.properties",
+			"size": 6856,
+			"locale": "zh_TW",
+			"raw": "i18n/i18n.properties"
+		},
+		{
+			"name": "localService/metadata.xml",
+			"size": 146087
+		},
+		{
+			"name": "manifest.json",
+			"module": "cus/sd/so/create/auto/xtrctns1/manifest.json",
+			"size": 20509
+		},
+		{
+			"name": "resources.json",
+			"size": 44354
+		},
+		{
+			"name": "version.json",
+			"size": 363
+		}
+	]
+}

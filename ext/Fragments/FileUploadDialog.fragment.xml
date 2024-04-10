@@ -1,0 +1,49 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns="sap.m" xmlns:core="sap.ui.core" xmlns:u="sap.ui.unified" xmlns:macro="sap.fe.macros.fpm" 
+xmlns:macros="sap.fe.macros" xmlns:template="http://schemas.sap.com/sapui5/extension/sap.ui.core.template/1">
+	<Dialog id="dialogUploadFile" resizable="true" horizontalScrolling="false" verticalScrolling="false" title="{i18n>fileUpldVw_title}" class="sapUiResponsiveContentPadding">
+		<content>
+			<VBox id="UploadVbox" height="100%" fitContainer="true">
+				<!-- PoC: This coding should be not needed at all but the macro field itself shall add it -->
+				<!--<dependents>-->
+				<!--	<macro:ValueHelp-->
+				<!--			_flexId="CompanyCodeInput_FieldValueHelp"-->
+				<!--			entitySet="{entitySet>}" property="{companyCode>}" />-->
+				<!--</dependents>-->
+				<!-- / end of PoC -->
+
+				<Label id="CompanyCodeLabel" text="{i18n>LABEL_COMPANY_CODE}" labelFor="CompanyCodeInput" required="true" width="13rem" wrapping="true"/>
+				<!--<macro:InputField-->
+				<!--	id="CompanyCodeInput"-->
+				<!--	property="CompanyCode"-->
+				<!--	editMode="Editable"-->
+				<!--	onChange="onCompanyCodeChange"-->
+				<!--	required="true"-->
+				<!--/>-->
+				<!--<template:with path="entitySet>" var="contextPath">-->
+					<macros:Field 
+						metaPath="CompanyCode" 
+						id="CompanyCodeInput" 
+						readOnly="false"
+						change="onCompanyCodeChange"
+						/>
+				<!--</template:with>-->
+				<Label id="FileLabel" text="{i18n>LABEL_FILE}" labelFor="fileUploaderRawData" required="true" width="13rem" wrapping="true"/>
+				<u:FileUploader id="fileUploaderRawData" name="rawDataFile" width="100%" fileType="pdf,jpg,jpeg,tif,tiff,png" multiple="false"
+					maximumFilenameLength="200" maximumFileSize="20" uploadComplete="onUploadComplete" change="onFilePathChange" sendXHR="true"
+					useMultipart="false" placeholder="{i18n>fileUpldVw_placeHolder}" sameFilenameAllowed="false" typeMissmatch="onTypeMissMatch"
+					fileSizeExceed="onfileSizeExceed" httpRequestMethod="Put" />
+			</VBox>
+		</content>
+		<beginButton>
+			<Button id="rawReportUploadButton" text="{i18n>fileUpldVw_upload}" press="uploadFile" enabled="false" type="Emphasized"/>
+		</beginButton>
+		<endButton>
+			<Button id="rawReportCancelButton" text="{i18n>fileUpldVw_cancel}" press="onUploadCancel"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

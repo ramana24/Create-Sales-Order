@@ -1,0 +1,4 @@
+/*
+ * Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+ */
+sap.ui.define(["sap/ui/core/mvc/ControllerExtension","sap/m/MessageToast","cus/sd/so/create/auto/xtrctns1/ext/controller/UploadController"],function(C,M,U){"use strict";return C.extend("cus.sd.so.create.auto.xtrctns1.ext.controller.LRExtend",{override:{extension:{},onInit:function(){var a=this.base.getAppComponent();this.oNavigationHandler=a.getNavigationService();var p=this.oNavigationHandler.parseNavigation();var t=this;p.done(function(A,u,n){t.handleNavigationParam(A,u,n);});p.fail(function(e){});},},handleNavigationParam:function(a,u,n){var o=U;if(!a.oDefaultedSelectionVariant){return;}var c=a.oDefaultedSelectionVariant.getSelectOption("CompanyCode");if(c&&c.length>=1){var d=null;for(var i in c){if(c[i].Option==="EQ"){if(d===null){d=c[i].Low;}else{d=null;o.setCurrentCompanyCode(null);return;}}}o.setCurrentCompanyCode(d);}}});});

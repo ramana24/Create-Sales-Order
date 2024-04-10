@@ -1,0 +1,1046 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<edmx:Edmx Version="4.0" xmlns="http://docs.oasis-open.org/odata/ns/edm" xmlns:edmx="http://docs.oasis-open.org/odata/ns/edmx">
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMUNICATION',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="Communication" Namespace="com.sap.vocabularies.Communication.v1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_PERSONALDATA',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="PersonalData" Namespace="com.sap.vocabularies.PersonalData.v1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_ANALYTICS',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="Analytics" Namespace="com.sap.vocabularies.Analytics.v1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_COMMON',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__common" Namespace="com.sap.vocabularies.Common.v1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_MEASURES',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__measures" Namespace="Org.OData.Measures.V1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CORE',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__core" Namespace="Org.OData.Core.V1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CAPABILITIES',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__capabilities" Namespace="Org.OData.Capabilities.V1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_AGGREGATION',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__aggregation" Namespace="Org.OData.Aggregation.V1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_VALIDATION',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__validation" Namespace="Org.OData.Validation.V1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_CODELIST',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__CodeList" Namespace="com.sap.vocabularies.CodeList.v1"/></edmx:Reference>
+	<edmx:Reference Uri="/sap/opu/odata/IWFND/CATALOGSERVICE;v=2/Vocabularies(TechnicalName='%2FIWBEP%2FVOC_UI',Version='0001',SAP__Origin='ER9CLNT001')/$value"><edmx:Include Alias="SAP__UI" Namespace="com.sap.vocabularies.UI.v1"/></edmx:Reference>
+	<edmx:DataServices>
+		<Schema Alias="SAP__self" Namespace="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001">
+			<EntityType Name="SalesOrderRequestType">
+				<Key><PropertyRef Name="SalesOrderRequest"/><PropertyRef Name="IsActiveEntity"/></Key><Property MaxLength="15" Name="SalesOrderRequest" Nullable="false" Type="Edm.String"/><Property MaxLength="4" Name="CompanyCode" Nullable="false" Type="Edm.String"/><Property MaxLength="25" Name="CompanyCodeName" Nullable="false" Type="Edm.String"/><Property MaxLength="127" Name="SalesOrderRequestFileMimeType" Nullable="false" Type="Edm.String"/><Property MaxLength="100" Name="SalesOrderRequestFileName" Nullable="false" Type="Edm.String"/><Property Name="UploadFileContentBinary" Nullable="false" Type="Edm.Stream"/><Property Name="SalesOrderRequestExtractorUUID" Type="Edm.Guid"/><Property MaxLength="1" Name="SalesOrderReqExtractionStatus" Nullable="false" Type="Edm.String"/><Property MaxLength="1" Name="MasterDataDeterminationStatus" Nullable="false" Type="Edm.String"/><Property MaxLength="1" Name="SalesOrderReqProcessingStatus" Nullable="false" Type="Edm.String"/><Property Name="SlsOrdReqXtrctnStsCriticality" Nullable="false" Type="Edm.Byte"/><Property Name="SlsOrdReqDataCmpltnsStsCritlty" Nullable="false" Type="Edm.Byte"/><Property Name="SlsOrdCrtnStatusCriticality" Nullable="false" Type="Edm.Byte"/><Property Name="SlsOrdReqProcgStsCriticality" Nullable="false" Type="Edm.Byte"/><Property Name="SlsOrdReqSimlnStsCriticality" Nullable="false" Type="Edm.Byte"/><Property Name="SlsOrdReqSmltdAmtDiffCritlty" Nullable="false" Type="Edm.Byte"/><Property Name="CreateSalesOrderIsHidden" Nullable="false" Type="Edm.Boolean"/><Property MaxLength="1" Name="SlsOrdReqDataCmpltnsStatus" Nullable="false" Type="Edm.String"/><Property MaxLength="1" Name="SalesOrderCreationStatus" Nullable="false" Type="Edm.String"/><Property MaxLength="1" Name="SlsOrdReqProcgStsInAutomXtrctn" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="SlsOrdReqXtrctnStsDescription" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="CompletenessStatusDescription" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="SalesOrderCreationStatusDesc" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="ProcessingStatusDesc" Nullable="false" Type="Edm.String"/><Property MaxLength="1" Name="SalesOrderReqSimulationStatus" Nullable="false" Type="Edm.String"/><Property MaxLength="60" Name="SlsOrdReqSimlnStsDescription" Nullable="false" Type="Edm.String"/><Property Name="LastSimulatedDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property MaxLength="4" Name="SalesOrderType" Nullable="false" Type="Edm.String"/><Property MaxLength="20" Name="SalesOrderTypeName" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="SoldToParty" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="CustomerName" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ShipToParty" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="ShipToPartyName" Nullable="false" Type="Edm.String"/><Property MaxLength="4" Name="SalesOrganization" Nullable="false" Type="Edm.String"/><Property MaxLength="20" Name="SalesOrganizationName" Nullable="false" Type="Edm.String"/><Property MaxLength="2" Name="DistributionChannel" Nullable="false" Type="Edm.String"/><Property MaxLength="20" Name="DistributionChannelName" Nullable="false" Type="Edm.String"/><Property MaxLength="2" Name="OrganizationDivision" Nullable="false" Type="Edm.String"/><Property MaxLength="20" Name="DivisionName" Nullable="false" Type="Edm.String"/><Property MaxLength="2" Name="ReferenceDistributionChannel" Nullable="false" Type="Edm.String"/><Property MaxLength="35" Name="PurchaseOrderByCustomer" Nullable="false" Type="Edm.String"/><Property MaxLength="5" Name="TransactionCurrency" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="CurrencyName" Nullable="false" Type="Edm.String"/><Property MaxLength="5" Name="ExtractedTransactionCurrency" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ExtractedTransCurrencyName" Nullable="false" Type="Edm.String"/><Property Name="TotalNetAmount" Nullable="false" Precision="15" Scale="variable" Type="Edm.Decimal"/><Property MaxLength="10" Name="SalesOrder" Nullable="false" Type="Edm.String"/><Property MaxLength="12" Name="CreatedByUser" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="CreatedByUserName" Nullable="false" Type="Edm.String"/><Property MaxLength="12" Name="LastChangedByUser" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="LastChangedByUserName" Nullable="false" Type="Edm.String"/><Property Name="LastChangeDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="RequestedDeliveryDate" Type="Edm.Date"/><Property Name="CreationDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property MaxLength="22" Name="SalesOrderRequestLogHandle" Nullable="false" Type="Edm.String"/><Property MaxLength="60" Name="SoldToPartyStreetName" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="SoldToPartyHouseNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="SoldToPartyPostalCode" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="SoldToPartyCityName" Nullable="false" Type="Edm.String"/><Property MaxLength="3" Name="SoldToPartyCountryName" Nullable="false" Type="Edm.String"/><Property MaxLength="60" Name="ShipToPartyStreetName" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ShipToPartyHouseNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ShipToPartyPostalCode" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ShipToPartyCityName" Nullable="false" Type="Edm.String"/><Property MaxLength="3" Name="ShipToPartyCountryName" Nullable="false" Type="Edm.String"/><Property Name="CustomerPurchaseOrderDate" Type="Edm.Date"/><Property MaxLength="3" Name="CurrencyISOCode" Nullable="false" Type="Edm.String"/><Property MaxLength="35" Name="ExtractedPurchaseOrder" Nullable="false" Type="Edm.String"/><Property Name="ExtractedRequestedDeliveryDate" Type="Edm.Date"/><Property Name="CustomerTotalNetAmount" Nullable="false" Precision="15" Scale="variable" Type="Edm.Decimal"/><Property MaxLength="80" Name="ExtractedSoldToPartyName" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="ExtractedSoldToPtyAddlName" Nullable="false" Type="Edm.String"/><Property MaxLength="60" Name="ExtractedSoldToPartyStreetName" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ExtractedSoldToPtyHouseNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ExtractedSoldToPartyPostalCode" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ExtractedSoldToPartyCityName" Nullable="false" Type="Edm.String"/><Property MaxLength="50" Name="ExtractedSoldToPtyCountryName" Nullable="false" Type="Edm.String"/><Property MaxLength="20" Name="ExtractedSoldToPtyTaxRegNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="ExtractedSoldToPartyTaxNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="18" Name="ExtractedSoldToPtyBankAccount" Nullable="false" Type="Edm.String"/><Property MaxLength="34" Name="ExtractedSoldToPartyIBAN" Nullable="false" Type="Edm.String"/><Property MaxLength="241" Name="ExtractedSoldToPtyEmailAddress" Nullable="false" Type="Edm.String"/><Property MaxLength="30" Name="ExtractedSoldToPtyTelNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="30" Name="ExtractedSoldToPartyFaxNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="ExtractedShipToPartyName" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="ExtractedShipToPtyAddlName" Nullable="false" Type="Edm.String"/><Property MaxLength="60" Name="ExtractedShipToPartyStreetName" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ExtractedShipToPtyHouseNumber" Nullable="false" Type="Edm.String"/><Property MaxLength="10" Name="ExtractedShipToPartyPostalCode" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ExtractedShipToPartyCityName" Nullable="false" Type="Edm.String"/><Property MaxLength="50" Name="ExtractedShipToPtyCountryName" Nullable="false" Type="Edm.String"/><Property MaxLength="30" Name="CustomerPaymentTermsText" Nullable="false" Type="Edm.String"/><Property MaxLength="30" Name="CustomerIncotermsText" Nullable="false" Type="Edm.String"/><Property Name="HasDraftEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="DraftEntityCreationDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="DraftEntityLastChangeDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="HasActiveEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="IsActiveEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="__CreateByAssociationControl" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestCbAControl"/><Property Name="__EntityControl" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.EntityControl"/><Property Name="__FieldControl" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestControl"/><Property Name="__OperationControl" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestOperationControl"/><Property Name="SAP__Messages" Nullable="false" Type="Collection(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SAP__Message)"/><NavigationProperty Name="DraftAdministrativeData" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.I_DraftAdministrativeDataType"/><NavigationProperty Name="SiblingEntity" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/>
+				<NavigationProperty Name="_DerivedItem" Partner="_SalesOrderRequest" Type="Collection(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestDerivedItemType)"><OnDelete Action="Cascade"/></NavigationProperty>
+				<NavigationProperty Name="_Item" Partner="_SalesOrderRequest" Type="Collection(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestItemType)"><OnDelete Action="Cascade"/></NavigationProperty>
+			</EntityType>
+			<EntityType Name="SalesOrderRequestDerivedItemType">
+				<Key><PropertyRef Name="SalesOrderRequest"/><PropertyRef Name="SalesOrderRequestItem"/><PropertyRef Name="SalesOrderItem"/><PropertyRef Name="IsActiveEntity"/></Key><Property MaxLength="15" Name="SalesOrderRequest" Nullable="false" Type="Edm.String"/><Property MaxLength="6" Name="SalesOrderRequestItem" Nullable="false" Type="Edm.String"/><Property MaxLength="6" Name="SalesOrderItem" Nullable="false" Type="Edm.String"/><Property MaxLength="6" Name="HigherLevelItem" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="Product" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ProductName" Nullable="false" Type="Edm.String"/><Property MaxLength="35" Name="MaterialByCustomer" Nullable="false" Type="Edm.String"/><Property Name="RequestedQuantity" Nullable="false" Precision="15" Scale="3" Type="Edm.Decimal"/><Property Name="ConfdDelivQtyInOrderQtyUnit" Nullable="false" Precision="15" Scale="3" Type="Edm.Decimal"/><Property MaxLength="3" Name="RequestedQuantityUnit" Nullable="false" Type="Edm.String"/><Property Name="NetAmount" Nullable="false" Precision="15" Scale="variable" Type="Edm.Decimal"/><Property MaxLength="5" Name="TransactionCurrency" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="CurrencyName" Nullable="false" Type="Edm.String"/><Property Name="ConfirmedDeliveryDate" Type="Edm.Date"/><Property MaxLength="4" Name="SalesOrderItemCategory" Nullable="false" Type="Edm.String"/><Property Name="HasDraftEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="DraftEntityCreationDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="DraftEntityLastChangeDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="HasActiveEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="IsActiveEntity" Nullable="false" Type="Edm.Boolean"/><NavigationProperty Name="DraftAdministrativeData" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.I_DraftAdministrativeDataType"/><NavigationProperty Name="SiblingEntity" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestDerivedItemType"/><NavigationProperty Name="_SalesOrderRequest" Nullable="false" Partner="_DerivedItem" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></EntityType>
+			<EntityType Name="SalesOrderRequestItemType">
+				<Key><PropertyRef Name="SalesOrderRequest"/><PropertyRef Name="SalesOrderRequestItem"/><PropertyRef Name="IsActiveEntity"/></Key><Property MaxLength="15" Name="SalesOrderRequest" Nullable="false" Type="Edm.String"/><Property MaxLength="6" Name="SalesOrderRequestItem" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="Product" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ProductName" Nullable="false" Type="Edm.String"/><Property Name="RequestedQuantity" Nullable="false" Precision="15" Scale="3" Type="Edm.Decimal"/><Property MaxLength="3" Name="RequestedQuantityUnit" Nullable="false" Type="Edm.String"/><Property MaxLength="35" Name="ExtractedCustomerMaterial" Nullable="false" Type="Edm.String"/><Property MaxLength="35" Name="ExtractedProduct" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="ExtractedProductDescription" Nullable="false" Type="Edm.String"/><Property Name="CustomerUnitPrice" Nullable="false" Precision="15" Scale="variable" Type="Edm.Decimal"/><Property Name="ExtractedPOItemNetAmount" Nullable="false" Precision="15" Scale="variable" Type="Edm.Decimal"/><Property MaxLength="5" Name="TransactionCurrency" Nullable="false" Type="Edm.String"/><Property MaxLength="40" Name="CurrencyName" Nullable="false" Type="Edm.String"/><Property Name="HasDraftEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="DraftEntityCreationDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="DraftEntityLastChangeDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="HasActiveEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="IsActiveEntity" Nullable="false" Type="Edm.Boolean"/><Property Name="__EntityControl" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.EntityControl"/><NavigationProperty Name="DraftAdministrativeData" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.I_DraftAdministrativeDataType"/><NavigationProperty Name="SiblingEntity" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestItemType"/><NavigationProperty Name="_SalesOrderRequest" Nullable="false" Partner="_Item" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></EntityType>
+			<EntityType Name="I_DraftAdministrativeDataType">
+				<Key><PropertyRef Name="DraftUUID"/><PropertyRef Name="DraftEntityType"/></Key><Property Name="DraftUUID" Nullable="false" Type="Edm.Guid"/><Property MaxLength="30" Name="DraftEntityType" Nullable="false" Type="Edm.String"/><Property Name="CreationDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property MaxLength="12" Name="CreatedByUser" Nullable="false" Type="Edm.String"/><Property Name="LastChangeDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property MaxLength="12" Name="LastChangedByUser" Nullable="false" Type="Edm.String"/><Property MaxLength="1" Name="DraftAccessType" Nullable="false" Type="Edm.String"/><Property Name="ProcessingStartDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property MaxLength="12" Name="InProcessByUser" Nullable="false" Type="Edm.String"/><Property Name="DraftIsKeptByUser" Nullable="false" Type="Edm.Boolean"/><Property Name="EnqueueStartDateTime" Precision="7" Type="Edm.DateTimeOffset"/><Property Name="DraftIsCreatedByMe" Nullable="false" Type="Edm.Boolean"/><Property Name="DraftIsLastChangedByMe" Nullable="false" Type="Edm.Boolean"/><Property Name="DraftIsProcessedByMe" Nullable="false" Type="Edm.Boolean"/><Property MaxLength="80" Name="CreatedByUserDescription" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="LastChangedByUserDescription" Nullable="false" Type="Edm.String"/><Property MaxLength="80" Name="InProcessByUserDescription" Nullable="false" Type="Edm.String"/></EntityType>
+			<ComplexType Name="SalesOrderRequestControl"><Property Name="SalesOrderRequestFileMimeType" Nullable="false" Type="Edm.Byte"/><Property Name="UploadFileContentBinary" Nullable="false" Type="Edm.Byte"/></ComplexType>
+			<ComplexType Name="SalesOrderRequestCbAControl"><Property Name="_Item" Nullable="false" Type="Edm.Boolean"/></ComplexType>
+			<ComplexType Name="SalesOrderRequestOperationControl"><Property Name="AnalyzeFileContent" Nullable="false" Type="Edm.Boolean"/><Property Name="CreateFollowOnSalesOrder" Nullable="false" Type="Edm.Boolean"/><Property Name="Edit" Nullable="false" Type="Edm.Boolean"/><Property Name="Prepare" Nullable="false" Type="Edm.Boolean"/><Property Name="SimulateFollowOnSalesOrder" Nullable="false" Type="Edm.Boolean"/><Property Name="Validate" Nullable="false" Type="Edm.Boolean"/></ComplexType>
+			<ComplexType Name="EntityControl"><Property Name="Deletable" Nullable="false" Type="Edm.Boolean"/><Property Name="Updatable" Nullable="false" Type="Edm.Boolean"/></ComplexType>
+			<ComplexType Name="SAP__Message"><Property Name="code" Nullable="false" Type="Edm.String"/><Property Name="message" Nullable="false" Type="Edm.String"/><Property Name="longtextUrl" Type="Edm.String"/><Property Name="numericSeverity" Nullable="false" Type="Edm.Byte"/><Property Name="target" Nullable="false" Type="Edm.String"/><Property Name="transition" Nullable="false" Type="Edm.Boolean"/></ComplexType>
+			<Action EntitySetPath="_it" IsBound="true" Name="Edit"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/><Parameter Name="PreserveChanges" Nullable="false" Type="Edm.Boolean"/><ReturnType Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="AdoptFileContentAnalysis"><Parameter Name="_it" Nullable="false" Type="Collection(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><Parameter Name="SalesOrderRequestExtractorUUID" Nullable="false" Type="Edm.Guid"/></Action>
+			<Action IsBound="true" Name="SimulateFollowOnSalesOrder"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="Resume"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="Discard"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action EntitySetPath="_it" IsBound="true" Name="Activate"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/><ReturnType Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="Validate"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="Prepare"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="AnalyzeFileContent"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action EntitySetPath="_it" IsBound="true" Name="CreateSalesOrderRequest"><Parameter Name="_it" Nullable="false" Type="Collection(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><Parameter Name="ResultIsActiveEntity" Nullable="false" Type="Edm.Boolean"/><Parameter MaxLength="4" Name="CompanyCode" Nullable="false" Type="Edm.String"/><Parameter MaxLength="1" Name="SalesOrderRequestCategory" Nullable="false" Type="Edm.String"/><ReturnType Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<Action IsBound="true" Name="CreateFollowOnSalesOrder"><Parameter Name="_it" Nullable="false" Type="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType"/></Action>
+			<EntityContainer Name="Container"><EntitySet EntityType="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.I_DraftAdministrativeDataType" Name="I_DraftAdministrativeData"/>
+				<EntitySet EntityType="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType" Name="SalesOrderRequest"><NavigationPropertyBinding Path="DraftAdministrativeData" Target="I_DraftAdministrativeData"/><NavigationPropertyBinding Path="SiblingEntity" Target="SalesOrderRequest"/><NavigationPropertyBinding Path="_DerivedItem" Target="SalesOrderRequestDerivedItem"/><NavigationPropertyBinding Path="_Item" Target="SalesOrderRequestItem"/></EntitySet>
+				<EntitySet EntityType="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestDerivedItemType" Name="SalesOrderRequestDerivedItem"><NavigationPropertyBinding Path="DraftAdministrativeData" Target="I_DraftAdministrativeData"/><NavigationPropertyBinding Path="SiblingEntity" Target="SalesOrderRequestDerivedItem"/><NavigationPropertyBinding Path="_SalesOrderRequest" Target="SalesOrderRequest"/></EntitySet>
+				<EntitySet EntityType="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestItemType" Name="SalesOrderRequestItem"><NavigationPropertyBinding Path="DraftAdministrativeData" Target="I_DraftAdministrativeData"/><NavigationPropertyBinding Path="SiblingEntity" Target="SalesOrderRequestItem"/><NavigationPropertyBinding Path="_SalesOrderRequest" Target="SalesOrderRequest"/></EntitySet>
+			</EntityContainer>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderRequest"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Sales Order Request" Term="SAP__common.Label"/><Annotation String="SOR" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CompanyCode"><Annotation Path="CompanyCodeName" Term="SAP__common.Text"/><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_companycodestdvh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.companycode'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Company Code" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CompanyCodeName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Company Name" Term="SAP__common.Label"/><Annotation String="Name of Company Code or Company" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderRequestFileMimeType"><Annotation Path="__FieldControl/SalesOrderRequestFileMimeType" Term="SAP__common.FieldControl"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="MIME Type" Term="SAP__common.Label"/><Annotation String="DD: Mime Type for Full-Text Index" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/UploadFileContentBinary"><Annotation Path="__FieldControl/UploadFileContentBinary" Term="SAP__common.FieldControl"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Source File" Term="SAP__common.Label"/><Annotation String="Source File of Sales Order Request" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderRequestExtractorUUID"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Extractor UUID" Term="SAP__common.Label"/><Annotation String="Extractor UUID for Sales Order Request" Term="SAP__common.Heading"/><Annotation String="File ID Returned by &amp;quot;Document Information Extraction&amp;quot; API" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderReqExtractionStatus">
+				<Annotation Path="SlsOrdReqXtrctnStsDescription" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextOnly" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_slsordreqextractionstatus/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.salesorderreqextractionstatus'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation Term="SAP__common.ValueListWithFixedValues"/>
+				<Annotation Term="SAP__UI.DataFieldDefault">
+					<Record Type="SAP__UI.DataField"><PropertyValue Path="SlsOrdReqXtrctnStsCriticality" Property="Criticality"/><PropertyValue EnumMember="SAP__UI.CriticalityRepresentationType/WithoutIcon" Property="CriticalityRepresentation"/><PropertyValue Path="SalesOrderReqExtractionStatus" Property="Value"/></Record>
+				</Annotation><Annotation String="Data Extraction" Term="SAP__common.Label"/><Annotation String="File Information Extraction Status" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/MasterDataDeterminationStatus"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="MD Determination Sts" Term="SAP__common.Label"/><Annotation String="MDDetn Sts" Term="SAP__common.Heading"/><Annotation String="Master Data Determination Status" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderReqProcessingStatus"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="SOR Procg Status" Term="SAP__common.Label"/><Annotation String="Sales Order Request Processing Status" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqXtrctnStsCriticality"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="INT1" Term="SAP__common.Label"/><Annotation String="1 Byte Unsigned Integer" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqDataCmpltnsStsCritlty"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="INT1" Term="SAP__common.Label"/><Annotation String="1 Byte Unsigned Integer" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdCrtnStatusCriticality"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="INT1" Term="SAP__common.Label"/><Annotation String="1 Byte Unsigned Integer" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqProcgStsCriticality"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="INT1" Term="SAP__common.Label"/><Annotation String="1 Byte Unsigned Integer" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqSimlnStsCriticality"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="INT1" Term="SAP__common.Label"/><Annotation String="1 Byte Unsigned Integer" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqSmltdAmtDiffCritlty"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="INT1" Term="SAP__common.Label"/><Annotation String="1 Byte Unsigned Integer" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CreateSalesOrderIsHidden"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Boolean Variable (X = True, - = False, Space = Unknown)" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqDataCmpltnsStatus">
+				<Annotation Path="CompletenessStatusDescription" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextOnly" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_slsordreqdatacmpltnsstatus/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.slsordreqdatacmpltnsstatus'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation Term="SAP__common.ValueListWithFixedValues"/><Annotation String="Data Completeness" Term="SAP__common.Label"/><Annotation String="Check on Completeness of Sales Order Request Data" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderCreationStatus">
+				<Annotation Path="SalesOrderCreationStatusDesc" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextOnly" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_salesordercreationstatus/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.salesordercreationstatus'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation Term="SAP__common.ValueListWithFixedValues"/><Annotation String="Order Creation" Term="SAP__common.Label"/><Annotation String="SO Crt Sts" Term="SAP__common.Heading"/><Annotation String="Sales Order Creation Status" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqProcgStsInAutomXtrctn"><Annotation Path="ProcessingStatusDesc" Term="SAP__common.Text"/><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Procg Status of Sales Order Request (Automatic Extraction)" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqXtrctnStsDescription"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Data Extraction" Term="SAP__common.Label"/><Annotation String="SO Xtrctn Sts" Term="SAP__common.Heading"/><Annotation String="Sales Order Request Extraction Status Text" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CompletenessStatusDescription"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Data Completeness" Term="SAP__common.Label"/><Annotation String="SO Cmpltn Sts" Term="SAP__common.Heading"/><Annotation String="Sales Order Completeness Status Text" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderCreationStatusDesc"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Order Creation" Term="SAP__common.Label"/><Annotation String="SO Crt Sts" Term="SAP__common.Heading"/><Annotation String="Sales Order Creation Status Text" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ProcessingStatusDesc"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Processing Status" Term="SAP__common.Label"/><Annotation String="SO Procg Sts" Term="SAP__common.Heading"/><Annotation String="Sales Order Request Processing Status" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderReqSimulationStatus">
+				<Annotation Path="SlsOrdReqSimlnStsDescription" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextOnly" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_slsordreqsimulationstatus/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.salesorderreqsimulationstatus'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation Term="SAP__common.ValueListWithFixedValues"/><Annotation String="Order Simulation" Term="SAP__common.Label"/><Annotation String="Sales Order Simulation" Term="SAP__common.Heading"/><Annotation String="Simulation Status for Sales Order Request" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SlsOrdReqSimlnStsDescription"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Short Descript." Term="SAP__common.Label"/><Annotation String="Short Text for Fixed Values" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/LastSimulatedDateTime"><Annotation Term="SAP__core.Computed"/><Annotation String="Last Simulated On" Term="SAP__common.Label"/><Annotation String="Time Stamp of Last Simulation" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderType"><Annotation Path="SalesOrderTypeName" Term="SAP__common.Text"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_salesordertypemanagevh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.salesordertype'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Sales Order Type" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderTypeName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/><Annotation String="Sales Document Type Description" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SoldToParty"><Annotation Path="CustomerName" Term="SAP__common.Text"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_soldtosalesareavh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.soldtoparty'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Customer" Term="SAP__common.SemanticObject"/><Annotation String="Sold-to Party" Term="SAP__common.Label"/><Annotation String="Sold-to" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CustomerName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Name of Customer" Term="SAP__common.Label"/><Annotation String="Customer" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToParty"><Annotation Path="ShipToPartyName" Term="SAP__common.Text"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_soldtosalesareavh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.shiptoparty'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Customer" Term="SAP__common.SemanticObject"/><Annotation String="Ship-to Party" Term="SAP__common.Label"/><Annotation String="Ship-To" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToPartyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Name of Customer" Term="SAP__common.Label"/><Annotation String="Customer" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrganization"><Annotation Path="SalesOrganizationName" Term="SAP__common.Text"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_salesdocsalesorganizationvh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.salesorganization'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Sales Organization" Term="SAP__common.Label"/><Annotation String="SOrg." Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrganizationName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Sales Organization Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/DistributionChannel"><Annotation Path="DistributionChannelName" Term="SAP__common.Text"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_dischannelvaluehelp/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.distributionchannel'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Distribution Channel" Term="SAP__common.Label"/><Annotation String="DChl" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/DistributionChannelName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Distribution Channel Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/OrganizationDivision"><Annotation Path="DivisionName" Term="SAP__common.Text"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_orgdivisionvaluehelp/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.organizationdivision'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Division" Term="SAP__common.Label"/><Annotation String="Dv" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/DivisionName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Division Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ReferenceDistributionChannel"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="RefDistCh-Cust/Mat." Term="SAP__common.Label"/><Annotation String="DCh-Cust/Mt" Term="SAP__common.Heading"/><Annotation String="Reference distrib.channel for cust.and material masters" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/TransactionCurrency"><Annotation Path="CurrencyName" Term="SAP__common.Text"/><Annotation String="Document Currency" Term="SAP__common.Label"/><Annotation String="Curr." Term="SAP__common.Heading"/><Annotation String="SD Document Currency" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CurrencyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedTransactionCurrency">
+				<Annotation Path="ExtractedTransCurrencyName" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextFirst" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_currencystdvh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.extractedtransactioncurrency'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Document Currency" Term="SAP__common.Label"/><Annotation String="Curr." Term="SAP__common.Heading"/><Annotation String="Document Currency Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedTransCurrencyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/TotalNetAmount"><Annotation Path="TransactionCurrency" Term="SAP__measures.ISOCurrency"/><Annotation String="Net Value" Term="SAP__common.Label"/><Annotation String="Net Value in Document Currency" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrder"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="SalesOrder" Term="SAP__common.SemanticObject"/><Annotation String="Sales Order" Term="SAP__common.Label"/><Annotation String="SO" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CreatedByUser">
+				<Annotation Path="CreatedByUserName" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextFirst" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_salesorderrequestuservh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.createdbyuser'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Created By" Term="SAP__common.Label"/><Annotation String="Name of Person Who Created Object" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CreatedByUserName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/><Annotation String="User Description" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/LastChangedByUser">
+				<Annotation Path="LastChangedByUserName" Term="SAP__common.Text"><Annotation EnumMember="SAP__UI.TextArrangementType/TextFirst" Term="SAP__UI.TextArrangement"/></Annotation><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_salesorderrequestuservh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqfrmexternalsourcetp.lastchangedbyuser'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Last Changed By" Term="SAP__common.Label"/><Annotation String="Changed By" Term="SAP__common.Heading"/><Annotation String="User Who Last Changed the Business Document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/LastChangedByUserName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/><Annotation String="User Description" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/LastChangeDateTime"><Annotation Term="SAP__core.Computed"/><Annotation String="Last Changed On" Term="SAP__common.Label"/><Annotation String="Last Changed Date Time" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CreationDateTime"><Annotation Term="SAP__core.Computed"/><Annotation String="Created On" Term="SAP__common.Label"/><Annotation String="Creation Date Time" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderRequestLogHandle"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="x" Term="SAP__common.Label"/><Annotation String="Text string 22 characters" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SoldToPartyStreetName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Street" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SoldToPartyHouseNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="House Number" Term="SAP__common.Label"/><Annotation String="House No." Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SoldToPartyPostalCode"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Postal Code" Term="SAP__common.Label"/><Annotation String="Post. Code" Term="SAP__common.Heading"/><Annotation String="City Postal Code" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SoldToPartyCityName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="City" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SoldToPartyCountryName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Country/Region" Term="SAP__common.Label"/><Annotation String="Country or Region" Term="SAP__common.Heading"/><Annotation String="Country/Region of Sold To Party" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToPartyStreetName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Street" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToPartyHouseNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="House Number" Term="SAP__common.Label"/><Annotation String="House No." Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToPartyPostalCode"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Postal Code" Term="SAP__common.Label"/><Annotation String="Post. Code" Term="SAP__common.Heading"/><Annotation String="City Postal Code" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToPartyCityName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="City" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ShipToPartyCountryName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Country/Region" Term="SAP__common.Label"/><Annotation String="Country or Region" Term="SAP__common.Heading"/><Annotation String="Country/Region of Ship To Party" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CustomerPurchaseOrderDate"><Annotation Term="SAP__core.Computed"/><Annotation String="Purchase Order Date" Term="SAP__common.Label"/><Annotation String="CustRefDat" Term="SAP__common.Heading"/><Annotation String="Extracted Purchase Order Date" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CurrencyISOCode"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Document Currency" Term="SAP__common.Label"/><Annotation String="ISO Code of Document Currency Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedPurchaseOrder"><Annotation Term="SAP__core.Computed"/><Annotation String="Purchase Order Number" Term="SAP__common.Label"/><Annotation String="Customer Reference" Term="SAP__common.Heading"/><Annotation String="Extracted Purchase Order Number" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedRequestedDeliveryDate"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Extracted Requested Delivery Date" Term="SAP__common.Label"/><Annotation String="Deliv.Date" Term="SAP__common.Heading"/><Annotation String="Requested Delivery Date" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CustomerTotalNetAmount"><Annotation Term="SAP__core.Computed"/><Annotation Path="ExtractedTransactionCurrency" Term="SAP__measures.ISOCurrency"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Extracted Net Value" Term="SAP__common.Label"/><Annotation String="Net Value" Term="SAP__common.Heading"/><Annotation String="Header Net Value Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Sold-to Party Name" Term="SAP__common.Label"/><Annotation String="Sold-to Party Name 1 Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyAddlName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Sold-to Party Name 2" Term="SAP__common.Label"/><Annotation String="Additional Sold-to Party Name Info Extracted from PurOrd" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyStreetName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Street" Term="SAP__common.Label"/><Annotation String="Street Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyHouseNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="House Number" Term="SAP__common.Label"/><Annotation String="House No." Term="SAP__common.Heading"/><Annotation String="House Number Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyPostalCode"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Postal Code" Term="SAP__common.Label"/><Annotation String="PostCode" Term="SAP__common.Heading"/><Annotation String="Postal Code Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyCityName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="City" Term="SAP__common.Label"/><Annotation String="City Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyCountryName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Country/Region" Term="SAP__common.Label"/><Annotation String="Country or Region" Term="SAP__common.Heading"/><Annotation String="Country/Region Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyTaxRegNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Tax Registration Number" Term="SAP__common.Label"/><Annotation String="Tax Registration Number Extracted from PurOrd(Sold-to-party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyTaxNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Additional Tax Number" Term="SAP__common.Label"/><Annotation String="TaxNo." Term="SAP__common.Heading"/><Annotation String="Additional Tax Number Extracted from Pur Ord (Sold-to-party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyBankAccount"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Bank Account" Term="SAP__common.Label"/><Annotation String="Bank Account Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyIBAN"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="International Bank Account Number" Term="SAP__common.Label"/><Annotation String="IBAN" Term="SAP__common.Heading"/><Annotation String="IBAN Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyEmailAddress"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Email" Term="SAP__common.Label"/><Annotation String="Email Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPtyTelNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Phone" Term="SAP__common.Label"/><Annotation String="Phone Number" Term="SAP__common.Heading"/><Annotation String="Phone Number Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedSoldToPartyFaxNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Fax" Term="SAP__common.Label"/><Annotation String="Fax Number" Term="SAP__common.Heading"/><Annotation String="Fax Number Extracted from Purchase Order (Sold-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPartyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Ship-to Party Name" Term="SAP__common.Label"/><Annotation String="XtrctSHName1" Term="SAP__common.Heading"/><Annotation String="Ship-to Party Name 1 Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPtyAddlName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Ship-to Party Name 2" Term="SAP__common.Label"/><Annotation String="XtrctSHName2" Term="SAP__common.Heading"/><Annotation String="Additional Ship-to Party Name Info Extracted from Pur Ord" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPartyStreetName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Street" Term="SAP__common.Label"/><Annotation String="Street Extracted from Purchase Order (Ship-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPtyHouseNumber"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="House Number" Term="SAP__common.Label"/><Annotation String="XtrctHNo" Term="SAP__common.Heading"/><Annotation String="House Number Extracted from Purchase Order (Ship-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPartyPostalCode"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Postal Code" Term="SAP__common.Label"/><Annotation String="XtrctPtCd" Term="SAP__common.Heading"/><Annotation String="Postal Code Extracted from Purchase Order (Ship-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPartyCityName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="City" Term="SAP__common.Label"/><Annotation String="City Extracted from Purchase Order (Ship-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/ExtractedShipToPtyCountryName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Country/Region" Term="SAP__common.Label"/><Annotation String="Country or Region" Term="SAP__common.Heading"/><Annotation String="Country/Region Extracted from Purchase Order (Ship-to Party)" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CustomerPaymentTermsText"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Payment Terms" Term="SAP__common.Label"/><Annotation String="Payment Terms Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/CustomerIncotermsText"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation String="Incoterms" Term="SAP__common.Label"/><Annotation String="Incoterms Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/HasDraftEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Has Draft" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Has draft document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/DraftEntityCreationDateTime"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Created On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/DraftEntityLastChangeDateTime"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Last Changed On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/HasActiveEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Has active" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Has active document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/IsActiveEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Is active" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Is active document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/__CreateByAssociationControl"><Annotation Term="SAP__core.Computed"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/__EntityControl"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/__FieldControl"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/__OperationControl"><Annotation Term="SAP__core.Computed"/></Annotations>
+			<Annotations Target="SAP__self.Container/SalesOrderRequest">
+				<Annotation Term="SAP__capabilities.NavigationRestrictions">
+					<Record>
+						<PropertyValue Property="RestrictedProperties">
+							<Collection>
+								<Record><PropertyValue NavigationPropertyPath="_Item" Property="NavigationProperty"/>
+									<PropertyValue Property="InsertRestrictions">
+										<Record><PropertyValue Path="__CreateByAssociationControl/_Item" Property="Insertable"/></Record>
+									</PropertyValue>
+								</Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__common.DraftRoot">
+					<Record><PropertyValue Property="EditAction" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.Edit"/><PropertyValue Property="DiscardAction" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.Discard"/><PropertyValue Property="ActivationAction" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.Activate"/><PropertyValue Property="PreparationAction" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.Prepare"/><PropertyValue Property="NewAction" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.CreateSalesOrderRequest"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.SearchRestrictions">
+					<Record><PropertyValue Bool="true" Property="Searchable"/><PropertyValue EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/OR SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group SAP__capabilities.SearchExpressions/phrase" Property="UnsupportedExpressions"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>CompanyCodeName</PropertyPath>
+								<PropertyPath>UploadFileContentBinary</PropertyPath>
+								<PropertyPath>SlsOrdReqXtrctnStsCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqDataCmpltnsStsCritlty</PropertyPath>
+								<PropertyPath>SlsOrdCrtnStatusCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqProcgStsCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqSimlnStsCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqSmltdAmtDiffCritlty</PropertyPath>
+								<PropertyPath>CreateSalesOrderIsHidden</PropertyPath>
+								<PropertyPath>SlsOrdReqProcgStsInAutomXtrctn</PropertyPath>
+								<PropertyPath>CompletenessStatusDescription</PropertyPath>
+								<PropertyPath>SalesOrderCreationStatusDesc</PropertyPath>
+								<PropertyPath>ProcessingStatusDesc</PropertyPath>
+								<PropertyPath>SlsOrdReqSimlnStsDescription</PropertyPath>
+								<PropertyPath>SalesOrderTypeName</PropertyPath>
+								<PropertyPath>TransactionCurrency</PropertyPath>
+								<PropertyPath>TotalNetAmount</PropertyPath>
+								<PropertyPath>SoldToPartyStreetName</PropertyPath>
+								<PropertyPath>SoldToPartyHouseNumber</PropertyPath>
+								<PropertyPath>SoldToPartyPostalCode</PropertyPath>
+								<PropertyPath>SoldToPartyCityName</PropertyPath>
+								<PropertyPath>SoldToPartyCountryName</PropertyPath>
+								<PropertyPath>ShipToPartyStreetName</PropertyPath>
+								<PropertyPath>ShipToPartyHouseNumber</PropertyPath>
+								<PropertyPath>ShipToPartyPostalCode</PropertyPath>
+								<PropertyPath>ShipToPartyCityName</PropertyPath>
+								<PropertyPath>ShipToPartyCountryName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyAddlName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyStreetName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyHouseNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyPostalCode</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyCityName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyCountryName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyTaxRegNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyTaxNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyBankAccount</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyIBAN</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyEmailAddress</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyTelNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyFaxNumber</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyName</PropertyPath>
+								<PropertyPath>ExtractedShipToPtyAddlName</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyStreetName</PropertyPath>
+								<PropertyPath>ExtractedShipToPtyHouseNumber</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyPostalCode</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyCityName</PropertyPath>
+								<PropertyPath>ExtractedShipToPtyCountryName</PropertyPath>
+								<PropertyPath>CustomerPaymentTermsText</PropertyPath>
+								<PropertyPath>CustomerIncotermsText</PropertyPath>
+								<PropertyPath>__CreateByAssociationControl</PropertyPath>
+								<PropertyPath>__EntityControl</PropertyPath>
+								<PropertyPath>__FieldControl</PropertyPath>
+								<PropertyPath>__OperationControl</PropertyPath>
+							</Collection>
+						</PropertyValue><PropertyValue Bool="true" Property="Filterable"/>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record><PropertyValue Property="Property" PropertyPath="RequestedDeliveryDate"/><PropertyValue Property="AllowedExpressions" String="SingleRange"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ExtractedRequestedDeliveryDate"/><PropertyValue Property="AllowedExpressions" String="SingleRange"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.SortRestrictions">
+					<Record>
+						<PropertyValue Property="NonSortableProperties">
+							<Collection>
+								<PropertyPath>CompanyCodeName</PropertyPath>
+								<PropertyPath>UploadFileContentBinary</PropertyPath>
+								<PropertyPath>SlsOrdReqXtrctnStsCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqDataCmpltnsStsCritlty</PropertyPath>
+								<PropertyPath>SlsOrdCrtnStatusCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqProcgStsCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqSimlnStsCriticality</PropertyPath>
+								<PropertyPath>SlsOrdReqSmltdAmtDiffCritlty</PropertyPath>
+								<PropertyPath>CreateSalesOrderIsHidden</PropertyPath>
+								<PropertyPath>SlsOrdReqProcgStsInAutomXtrctn</PropertyPath>
+								<PropertyPath>CompletenessStatusDescription</PropertyPath>
+								<PropertyPath>SalesOrderCreationStatusDesc</PropertyPath>
+								<PropertyPath>ProcessingStatusDesc</PropertyPath>
+								<PropertyPath>SlsOrdReqSimlnStsDescription</PropertyPath>
+								<PropertyPath>SalesOrderTypeName</PropertyPath>
+								<PropertyPath>TransactionCurrency</PropertyPath>
+								<PropertyPath>TotalNetAmount</PropertyPath>
+								<PropertyPath>SoldToPartyStreetName</PropertyPath>
+								<PropertyPath>SoldToPartyHouseNumber</PropertyPath>
+								<PropertyPath>SoldToPartyPostalCode</PropertyPath>
+								<PropertyPath>SoldToPartyCityName</PropertyPath>
+								<PropertyPath>SoldToPartyCountryName</PropertyPath>
+								<PropertyPath>ShipToPartyStreetName</PropertyPath>
+								<PropertyPath>ShipToPartyHouseNumber</PropertyPath>
+								<PropertyPath>ShipToPartyPostalCode</PropertyPath>
+								<PropertyPath>ShipToPartyCityName</PropertyPath>
+								<PropertyPath>ShipToPartyCountryName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyAddlName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyStreetName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyHouseNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyPostalCode</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyCityName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyCountryName</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyTaxRegNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyTaxNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyBankAccount</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyIBAN</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyEmailAddress</PropertyPath>
+								<PropertyPath>ExtractedSoldToPtyTelNumber</PropertyPath>
+								<PropertyPath>ExtractedSoldToPartyFaxNumber</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyName</PropertyPath>
+								<PropertyPath>ExtractedShipToPtyAddlName</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyStreetName</PropertyPath>
+								<PropertyPath>ExtractedShipToPtyHouseNumber</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyPostalCode</PropertyPath>
+								<PropertyPath>ExtractedShipToPartyCityName</PropertyPath>
+								<PropertyPath>ExtractedShipToPtyCountryName</PropertyPath>
+								<PropertyPath>CustomerPaymentTermsText</PropertyPath>
+								<PropertyPath>CustomerIncotermsText</PropertyPath>
+								<PropertyPath>__CreateByAssociationControl</PropertyPath>
+								<PropertyPath>__EntityControl</PropertyPath>
+								<PropertyPath>__FieldControl</PropertyPath>
+								<PropertyPath>__OperationControl</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.InsertRestrictions">
+					<Record><PropertyValue Bool="false" Property="Insertable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.DeleteRestrictions">
+					<Record><PropertyValue Path="__EntityControl/Deletable" Property="Deletable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.UpdateRestrictions">
+					<Record><PropertyValue Path="__EntityControl/Updatable" Property="Updatable"/>
+						<PropertyValue Property="QueryOptions">
+							<Record><PropertyValue Bool="true" Property="SelectSupported"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.Edit(SAP__self.SalesOrderRequestType)"><Annotation Path="_it/__OperationControl/Edit" Term="SAP__core.OperationAvailable"/></Annotations>
+			<Annotations Target="SAP__self.AdoptFileContentAnalysis(Collection(SAP__self.SalesOrderRequestType))/SalesOrderRequestExtractorUUID"><Annotation String="DOX UUID" Term="SAP__common.Label"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/></Annotations>
+			<Annotations Target="SAP__self.SimulateFollowOnSalesOrder(SAP__self.SalesOrderRequestType)"><Annotation Path="_it/__OperationControl/SimulateFollowOnSalesOrder" Term="SAP__core.OperationAvailable"/></Annotations>
+			<Annotations Target="SAP__self.Validate(SAP__self.SalesOrderRequestType)"><Annotation Path="_it/__OperationControl/Validate" Term="SAP__core.OperationAvailable"/></Annotations>
+			<Annotations Target="SAP__self.Prepare(SAP__self.SalesOrderRequestType)"><Annotation Path="_it/__OperationControl/Prepare" Term="SAP__core.OperationAvailable"/></Annotations>
+			<Annotations Target="SAP__self.AnalyzeFileContent(SAP__self.SalesOrderRequestType)"><Annotation Path="_it/__OperationControl/AnalyzeFileContent" Term="SAP__core.OperationAvailable"/></Annotations>
+			<Annotations Target="SAP__self.CreateSalesOrderRequest(Collection(SAP__self.SalesOrderRequestType))/CompanyCode"><Annotation String="Company Code" Term="SAP__common.Label"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_companycodestdvh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.ae-c_slsordreqfrmexternalsourcetp.createsalesorderrequest.companycode.SalesOrderRequestType.X'/$metadata</String>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.CreateSalesOrderRequest(Collection(SAP__self.SalesOrderRequestType))/SalesOrderRequestCategory"><Annotation String="Sales Order Request Category" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.CreateFollowOnSalesOrder(SAP__self.SalesOrderRequestType)"><Annotation Path="_it/__OperationControl/CreateFollowOnSalesOrder" Term="SAP__core.OperationAvailable"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType"><Annotation String="Projection View of Sales Order Request" Term="SAP__common.Label"/>
+				<Annotation Term="SAP__common.SemanticKey">
+					<Collection>
+						<PropertyPath>SalesOrderRequest</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Qualifier="TotalNetAmount" Term="SAP__UI.DataPoint">
+					<Record><PropertyValue Path="CustomerTotalNetAmount" Property="Value"/><PropertyValue Property="Title" String="Extracted Net Value"/></Record>
+				</Annotation>
+				<Annotation Qualifier="ProcessingStatus" Term="SAP__UI.DataPoint">
+					<Record><PropertyValue Path="ProcessingStatusDesc" Property="Value"/><PropertyValue Property="Title" String="Processing Status"/><PropertyValue Property="Description" String="Processing Status Description"/><PropertyValue Path="SlsOrdReqProcgStsCriticality" Property="Criticality"/><PropertyValue EnumMember="SAP__UI.CriticalityRepresentationType/WithoutIcon" Property="CriticalityRepresentation"/></Record>
+				</Annotation>
+				<Annotation Qualifier="SimulationResult" Term="SAP__UI.DataPoint">
+					<Record><PropertyValue Path="SalesOrderReqSimulationStatus" Property="Value"/><PropertyValue Property="Title" String="Order Simulation"/><PropertyValue Path="SlsOrdReqSimlnStsCriticality" Property="Criticality"/><PropertyValue EnumMember="SAP__UI.CriticalityRepresentationType/WithoutIcon" Property="CriticalityRepresentation"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.FilterFacets">
+					<Collection>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Basic Sales Data"/><PropertyValue Property="ID" String="BasicSalesDataFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#BasicSalesDataFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Business Partners"/><PropertyValue Property="ID" String="BusinessPartnersFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#BusinessPartnersFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Organizational Data"/><PropertyValue Property="ID" String="OrganizationalDataFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#OrganizationalDataFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Status"/><PropertyValue Property="ID" String="SalesOrderRequestStatusFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#SalesOrderRequestStatusFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Administrative Data"/><PropertyValue Property="ID" String="AdministrativeDataFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#AdministrativeDataFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Extracted Purchasing Data"/><PropertyValue Property="ID" String="XtrPORDataFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#XtrPORDataFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Others"/><PropertyValue Property="ID" String="OthersDataFilterFacet"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#OthersDataFilterFacet" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.HeaderFacets">
+					<Collection>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="OrganizationalDataHeader"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#OrderDataHeader" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="AdministrativeDataHeader"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#AdministrativeDataHeader" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="ProcessingStatusHeader"/><PropertyValue AnnotationPath="@SAP__UI.DataPoint#ProcessingStatus" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="SimulationResultHeader"/><PropertyValue AnnotationPath="@SAP__UI.DataPoint#SimulationResult" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="NetValueDataHeader"/><PropertyValue AnnotationPath="@SAP__UI.DataPoint#TotalNetAmount" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.Facets">
+					<Collection>
+						<Record Type="SAP__UI.CollectionFacet"><PropertyValue Property="Label" String="Header Data"/><PropertyValue Property="ID" String="HeaderData"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Basic Sales Data"/><PropertyValue Property="ID" String="BasicSalesData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#BasicSalesData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Sold-to Party Data"/><PropertyValue Property="ID" String="SoldtoPartyData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#SoldtoPartyData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Ship-to Party Data"/><PropertyValue Property="ID" String="ShiptoPartyData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#ShiptoPartyData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Extracted Purchasing Data"/><PropertyValue Property="ID" String="XtrPORData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#XtrPORData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Extracted Sold-to Party Address Data"/><PropertyValue Property="ID" String="XtrSoldtoPartyAddrData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#XtrSoldtoPartyAddrData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Extracted Sold-to Party Additional Data"/><PropertyValue Property="ID" String="XtrSoldtoPartyAddlData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#XtrSoldtoPartyAddlData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Extracted Ship-to Party Address Data"/><PropertyValue Property="ID" String="XtrShiptoPartyData"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#XtrShiptoPartyData" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="Label" String="Extracted Terms"/><PropertyValue Property="ID" String="XtrTerms"/><PropertyValue AnnotationPath="@SAP__UI.FieldGroup#XtrTerms" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								</Collection>
+							</PropertyValue><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.CollectionFacet"><PropertyValue Property="Label" String="Item Data"/><PropertyValue Property="ID" String="ItemDatas"/>
+							<PropertyValue Property="Facets">
+								<Collection>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="SalesOrderRequestItems"/><PropertyValue AnnotationPath="_Item/@SAP__UI.LineItem" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+									<Record Type="SAP__UI.ReferenceFacet"><PropertyValue Property="ID" String="SalesOrderRequestDerivedItems"/><PropertyValue AnnotationPath="_DerivedItem/@SAP__UI.LineItem" Property="Target"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								</Collection>
+							</PropertyValue><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Qualifier="AdministrativeDataFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CreationDateTime" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="LastChangedByUser" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="LastSimulatedDateTime" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="AdministrativeDataHeader" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="LastChangedByUser" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="LastChangeDateTime" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CreatedByUser" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CreationDateTime" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="LastSimulatedDateTime" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="BasicSalesData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrganization" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="DistributionChannel" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="OrganizationDivision" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderType" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="RequestedDeliveryDate" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="PurchaseOrderByCustomer" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="BasicSalesDataFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedTransactionCurrency" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderType" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="RequestedDeliveryDate" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="PurchaseOrderByCustomer" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="BusinessPartnersFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToParty" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToParty" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="OrderDataHeader" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CompanyCode" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="UploadFileContentBinary" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrder" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="OrganizationalDataFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrganization" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CompanyCode" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="DistributionChannel" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="OrganizationDivision" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="OthersDataFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestFileName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="SalesOrderRequestStatusFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SlsOrdReqDataCmpltnsStatus" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderReqExtractionStatus" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderCreationStatus" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderReqSimulationStatus" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="ShiptoPartyData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToParty" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToPartyStreetName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToPartyHouseNumber" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToPartyPostalCode" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToPartyCityName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ShipToPartyCountryName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="SoldtoPartyData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToParty" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToPartyStreetName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToPartyHouseNumber" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToPartyPostalCode" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToPartyCityName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="SoldToPartyCountryName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="XtrPORData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedPurchaseOrder" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CustomerPurchaseOrderDate" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedRequestedDeliveryDate" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedTransactionCurrency" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CustomerTotalNetAmount" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="XtrPORDataFilterFacet" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CustomerPurchaseOrderDate" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedPurchaseOrder" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="XtrShiptoPartyData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPartyName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPtyAddlName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPartyStreetName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPtyHouseNumber" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPartyPostalCode" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPartyCityName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedShipToPtyCountryName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="XtrSoldtoPartyAddlData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPtyTaxRegNumber" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPartyTaxNumber" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPtyBankAccount" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPartyIBAN" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="XtrSoldtoPartyAddrData" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPartyName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPtyAddlName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPartyStreetName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPtyHouseNumber" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPartyPostalCode" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPartyCityName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedSoldToPtyCountryName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Qualifier="XtrTerms" Term="SAP__UI.FieldGroup">
+					<Record>
+						<PropertyValue Property="Data">
+							<Collection>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CustomerPaymentTermsText" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+								<Record Type="SAP__UI.DataField"><PropertyValue Path="CustomerIncotermsText" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Sales Order Request"/><PropertyValue Property="TypeNamePlural" String="Sales Order Requests"/>
+						<PropertyValue Property="Title">
+							<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequest" Property="Value"/></Record>
+						</PropertyValue>
+						<PropertyValue Property="Description">
+							<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestFileName" Property="Value"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.Identification">
+					<Collection>
+						<Record Type="SAP__UI.DataFieldForAction"><PropertyValue Property="Label" String="Create Sales Order"/><PropertyValue Property="Action" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.CreateFollowOnSalesOrder(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><PropertyValue EnumMember="SAP__UI.OperationGroupingType/Isolated" Property="InvocationGrouping"/><Annotation Path="CreateSalesOrderIsHidden" Term="SAP__UI.Hidden"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataFieldForAction"><PropertyValue Property="Label" String="Simulate Creation"/><PropertyValue Property="Action" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SimulateFollowOnSalesOrder(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><PropertyValue EnumMember="SAP__UI.OperationGroupingType/Isolated" Property="InvocationGrouping"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.LineItem">
+					<Collection>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequest" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestFileName" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataFieldForAction"><PropertyValue Property="Label" String="Retry Extraction"/><PropertyValue Property="Action" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.AnalyzeFileContent(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><PropertyValue EnumMember="SAP__UI.OperationGroupingType/Isolated" Property="InvocationGrouping"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataFieldForAction"><PropertyValue Property="Label" String="Create Sales Order"/><PropertyValue Property="Action" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.CreateFollowOnSalesOrder(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><PropertyValue EnumMember="SAP__UI.OperationGroupingType/Isolated" Property="InvocationGrouping"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SlsOrdReqSimlnStsCriticality" Property="Criticality"/><PropertyValue EnumMember="SAP__UI.CriticalityRepresentationType/WithoutIcon" Property="CriticalityRepresentation"/><PropertyValue Path="SalesOrderReqSimulationStatus" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataFieldForAction"><PropertyValue Property="Label" String="Simulate Creation"/><PropertyValue Property="Action" String="com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SimulateFollowOnSalesOrder(com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.SalesOrderRequestType)"/><PropertyValue EnumMember="SAP__UI.OperationGroupingType/Isolated" Property="InvocationGrouping"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrder" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="LastChangeDateTime" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="CreatedByUser" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.PresentationVariant">
+					<Record>
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="SAP__common.SortOrderType"><PropertyValue Property="Property" PropertyPath="LastChangeDateTime"/><PropertyValue Bool="true" Property="Descending"/></Record>
+							</Collection>
+						</PropertyValue>
+						<PropertyValue Property="Visualizations">
+							<Collection>
+								<AnnotationPath>@SAP__UI.LineItem</AnnotationPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.SelectionFields">
+					<Collection>
+						<PropertyPath>SalesOrderRequest</PropertyPath>
+						<PropertyPath>CreatedByUser</PropertyPath>
+						<PropertyPath>LastChangeDateTime</PropertyPath>
+						<PropertyPath>SalesOrder</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="Communication.Contact"><Record/></Annotation><Annotation Path="SAP__Messages" Term="SAP__common.Messages"/></Annotations>
+			<Annotations Target="SAP__self.Container">
+				<Annotation Term="SAP__CodeList.CurrencyCodes">
+					<Record><PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/><PropertyValue Property="CollectionPath" String="Currencies"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__CodeList.UnitsOfMeasure">
+					<Record><PropertyValue Property="Url" String="../../../../default/iwbep/common/0001/$metadata"/><PropertyValue Property="CollectionPath" String="UnitsOfMeasure"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__aggregation.ApplySupported">
+					<Record>
+						<PropertyValue Property="Transformations">
+							<Collection>
+								<String>aggregate</String>
+								<String>groupby</String>
+								<String>filter</String>
+							</Collection>
+						</PropertyValue><PropertyValue EnumMember="SAP__aggregation.RollupType/None" Property="Rollup"/></Record>
+				</Annotation><Annotation Bool="true" Term="SAP__common.ApplyMultiUnitBehaviorForSortingAndFiltering"/>
+				<Annotation Term="SAP__capabilities.FilterFunctions">
+					<Collection>
+						<String>eq</String>
+						<String>ne</String>
+						<String>gt</String>
+						<String>ge</String>
+						<String>lt</String>
+						<String>le</String>
+						<String>and</String>
+						<String>or</String>
+						<String>contains</String>
+						<String>startswith</String>
+						<String>endswith</String>
+						<String>any</String>
+						<String>all</String>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/SalesOrderRequest"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Sales Order Request" Term="SAP__common.Label"/><Annotation String="SOR" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/SalesOrderRequestItem"><Annotation Term="SAP__common.IsDigitSequence"/><Annotation String="Sales Order Request Item" Term="SAP__common.Label"/><Annotation String="SOR Item" Term="SAP__common.Heading"/><Annotation String="Sales Order Request Item for Sales Order Derived Item" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/SalesOrderItem"><Annotation Term="SAP__common.IsDigitSequence"/><Annotation String="Sales Order Item" Term="SAP__common.Label"/><Annotation String="SO Item" Term="SAP__common.Heading"/><Annotation String="Sales Order Item for Sales Order Derived Item" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/HigherLevelItem"><Annotation Term="SAP__common.IsDigitSequence"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Higher-Level Item" Term="SAP__common.Label"/><Annotation String="HgLvIt" Term="SAP__common.Heading"/><Annotation String="Higher-Level Item in Bill of Material Structures" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/Product"><Annotation Path="ProductName" Term="SAP__common.Text"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Material" Term="SAP__common.SemanticObject"/><Annotation String="Product" Term="SAP__common.Label"/><Annotation String="Product Number" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/ProductName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Product Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/MaterialByCustomer"><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Customer Material" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/RequestedQuantity"><Annotation Path="RequestedQuantityUnit" Term="SAP__measures.Unit"/><Annotation Decimal="0" Term="SAP__validation.Minimum"/><Annotation String="Requested Quantity" Term="SAP__common.Label"/><Annotation String="Reqd Qty" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/ConfdDelivQtyInOrderQtyUnit"><Annotation Path="RequestedQuantityUnit" Term="SAP__measures.Unit"/><Annotation Decimal="0" Term="SAP__validation.Minimum"/><Annotation String="Confirmed Quantity" Term="SAP__common.Label"/><Annotation String="Cumulative Confirmed Quantity in Sales Unit" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/NetAmount"><Annotation Path="TransactionCurrency" Term="SAP__measures.ISOCurrency"/><Annotation String="Net Value" Term="SAP__common.Label"/><Annotation String="Net Value of the Order Item in Document Currency" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/TransactionCurrency"><Annotation Path="CurrencyName" Term="SAP__common.Text"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Document Currency" Term="SAP__common.Label"/><Annotation String="Curr." Term="SAP__common.Heading"/><Annotation String="SD Document Currency" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/CurrencyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/SalesOrderItemCategory"><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Item Category" Term="SAP__common.Label"/><Annotation String="Sales Document Item Category" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/HasDraftEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Has Draft" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Has draft document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/DraftEntityCreationDateTime"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Created On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/DraftEntityLastChangeDateTime"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Last Changed On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/HasActiveEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Has active" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Has active document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/IsActiveEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Is active" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Is active document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.Container/SalesOrderRequestDerivedItem">
+				<Annotation Term="SAP__common.DraftNode"><Record/></Annotation>
+				<Annotation Term="SAP__common.DraftActivationVia">
+					<Collection>
+						<String>SAP__self.Container/SalesOrderRequest</String>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.SearchRestrictions">
+					<Record><PropertyValue Bool="false" Property="Searchable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.InsertRestrictions">
+					<Record><PropertyValue Bool="false" Property="Insertable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.DeleteRestrictions">
+					<Record><PropertyValue Bool="false" Property="Deletable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.UpdateRestrictions">
+					<Record><PropertyValue Bool="false" Property="Updatable"/>
+						<PropertyValue Property="QueryOptions">
+							<Record><PropertyValue Bool="true" Property="SelectSupported"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record><PropertyValue Property="Property" PropertyPath="MaterialByCustomer"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="RequestedQuantity"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="ConfdDelivQtyInOrderQtyUnit"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="NetAmount"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="SalesOrderItemCategory"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="HasDraftEntity"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="HasActiveEntity"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="IsActiveEntity"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/RequestedQuantityUnit">
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_productunitsofmeasurevh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqdrvditmfrmextsrcetp.requestedquantityunit'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Requested Qty Unit" Term="SAP__common.Label"/><Annotation String="RQ Unit" Term="SAP__common.Heading"/><Annotation String="Unit of the Requested Quantity" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType"><Annotation String="Projection View of Simulated Items for Sales Order Request" Term="SAP__common.Label"/>
+				<Annotation Term="SAP__common.SemanticKey">
+					<Collection>
+						<PropertyPath>SalesOrderItem</PropertyPath>
+						<PropertyPath>SalesOrderRequestItem</PropertyPath>
+						<PropertyPath>SalesOrderRequest</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Simulated Item"/><PropertyValue Property="TypeNamePlural" String="Simulated Items"/>
+						<PropertyValue Property="Title">
+							<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestItem" Property="Value"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.LineItem">
+					<Collection>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestItem" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderItem" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="Product" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="RequestedQuantity" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="ConfdDelivQtyInOrderQtyUnit" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderItemCategory" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="MaterialByCustomer" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="ConfirmedDeliveryDate" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="NetAmount" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.PresentationVariant">
+					<Record>
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="SAP__common.SortOrderType"><PropertyValue Property="Property" PropertyPath="SalesOrderRequestItem"/><PropertyValue Bool="false" Property="Descending"/></Record>
+								<Record Type="SAP__common.SortOrderType"><PropertyValue Property="Property" PropertyPath="HigherLevelItem"/><PropertyValue Bool="false" Property="Descending"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.SelectionFields">
+					<Collection>
+						<PropertyPath>SalesOrderRequestItem</PropertyPath>
+						<PropertyPath>SalesOrderItem</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/SalesOrderRequest"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Sales Order Request" Term="SAP__common.Label"/><Annotation String="SOR" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/SalesOrderRequestItem"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsDigitSequence"/><Annotation String="Item" Term="SAP__common.Label"/><Annotation String="SOR Item" Term="SAP__common.Heading"/><Annotation String="Sales Order Request Item" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/Product"><Annotation Path="ProductName" Term="SAP__common.Text"/><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Term="SAP__common.IsUpperCase"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/i_productbydistributionchainvh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqitmfrmextsourcetp.product'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Material" Term="SAP__common.SemanticObject"/><Annotation String="Product" Term="SAP__common.Label"/><Annotation String="Product Number" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/ProductName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Product Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/RequestedQuantity"><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/><Annotation Path="RequestedQuantityUnit" Term="SAP__measures.Unit"/><Annotation Decimal="0" Term="SAP__validation.Minimum"/><Annotation String="Requested Quantity" Term="SAP__common.Label"/><Annotation String="Reqd Qty" Term="SAP__common.Heading"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/RequestedQuantityUnit"><Annotation EnumMember="SAP__common.FieldControlType/Mandatory" Term="SAP__common.FieldControl"/>
+				<Annotation Term="SAP__common.ValueListReferences">
+					<Collection>
+						<String>../../../../srvd_f4/sap/c_productunitsofmeasurevh/0001;ps='srvd-c_slsordreqfrmextsource_sd-0001';va='com.sap.gateway.srvd.c_slsordreqfrmextsource_sd.v0001.et-c_slsordreqitmfrmextsourcetp.requestedquantityunit'/$metadata</String>
+					</Collection>
+				</Annotation><Annotation String="Requested Qty Unit" Term="SAP__common.Label"/><Annotation String="RQ Unit" Term="SAP__common.Heading"/><Annotation String="Unit of the Requested Quantity" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/ExtractedCustomerMaterial"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Extracted Customer Material" Term="SAP__common.Label"/><Annotation String="Customer Material Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/ExtractedProduct"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Extracted Product" Term="SAP__common.Label"/><Annotation String="Product" Term="SAP__common.Heading"/><Annotation String="Product Extracted from Purchase Order" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/ExtractedProductDescription"><Annotation Term="SAP__core.Computed"/><Annotation String="Extracted Description" Term="SAP__common.Label"/><Annotation String="Product Description" Term="SAP__common.Heading"/><Annotation String="Description of Requested Product Extracted from Pur Ord" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/CustomerUnitPrice"><Annotation Term="SAP__core.Computed"/><Annotation Path="TransactionCurrency" Term="SAP__measures.ISOCurrency"/><Annotation String="Extracted Unit Price" Term="SAP__common.Label"/><Annotation String="Unit Price" Term="SAP__common.Heading"/><Annotation String="Unit Price Extracted from Purchase Order Item" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/ExtractedPOItemNetAmount"><Annotation Term="SAP__core.Computed"/><Annotation Path="TransactionCurrency" Term="SAP__measures.ISOCurrency"/><Annotation String="Extracted Net Value" Term="SAP__common.Label"/><Annotation String="Net Value" Term="SAP__common.Heading"/><Annotation String="Net Value Extracted from Purchase Order Item" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/TransactionCurrency"><Annotation Path="CurrencyName" Term="SAP__common.Text"/><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Document Currency" Term="SAP__common.Label"/><Annotation String="Document Currency Extracted from Purchase Order Item" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/CurrencyName"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Description" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/HasDraftEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Has Draft" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Has draft document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/DraftEntityCreationDateTime"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Created On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/DraftEntityLastChangeDateTime"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Last Changed On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/HasActiveEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Has active" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Has active document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/IsActiveEntity"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Is active" Term="SAP__common.Label"/><Annotation String="Draft - Indicator - Is active document" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/__EntityControl"><Annotation Term="SAP__core.Computed"/><Annotation Term="SAP__UI.HiddenFilter"/><Annotation Term="SAP__UI.Hidden"/></Annotations>
+			<Annotations Target="SAP__self.Container/SalesOrderRequestItem">
+				<Annotation Term="SAP__common.DraftNode"><Record/></Annotation>
+				<Annotation Term="SAP__common.DraftActivationVia">
+					<Collection>
+						<String>SAP__self.Container/SalesOrderRequest</String>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.SearchRestrictions">
+					<Record><PropertyValue Bool="false" Property="Searchable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="NonFilterableProperties">
+							<Collection>
+								<PropertyPath>__EntityControl</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.SortRestrictions">
+					<Record>
+						<PropertyValue Property="NonSortableProperties">
+							<Collection>
+								<PropertyPath>__EntityControl</PropertyPath>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.InsertRestrictions">
+					<Record><PropertyValue Bool="false" Property="Insertable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.DeleteRestrictions">
+					<Record><PropertyValue Path="__EntityControl/Deletable" Property="Deletable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.UpdateRestrictions">
+					<Record><PropertyValue Path="__EntityControl/Updatable" Property="Updatable"/>
+						<PropertyValue Property="QueryOptions">
+							<Record><PropertyValue Bool="true" Property="SelectSupported"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType"><Annotation String="Projection for Sls Ord Req Itm" Term="SAP__common.Label"/>
+				<Annotation Term="SAP__common.SemanticKey">
+					<Collection>
+						<PropertyPath>SalesOrderRequestItem</PropertyPath>
+						<PropertyPath>SalesOrderRequest</PropertyPath>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.HeaderInfo">
+					<Record><PropertyValue Property="TypeName" String="Sales Order Request Item"/><PropertyValue Property="TypeNamePlural" String="Sales Order Request Items"/>
+						<PropertyValue Property="Title">
+							<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestItem" Property="Value"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.LineItem">
+					<Collection>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="SalesOrderRequestItem" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedCustomerMaterial" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedProduct" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedProductDescription" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="Product" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="RequestedQuantity" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="RequestedQuantityUnit" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="CustomerUnitPrice" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+						<Record Type="SAP__UI.DataField"><PropertyValue Path="ExtractedPOItemNetAmount" Property="Value"/><Annotation EnumMember="SAP__UI.ImportanceType/High" Term="SAP__UI.Importance"/></Record>
+					</Collection>
+				</Annotation>
+				<Annotation Term="SAP__UI.PresentationVariant">
+					<Record>
+						<PropertyValue Property="SortOrder">
+							<Collection>
+								<Record Type="SAP__common.SortOrderType"><PropertyValue Property="Property" PropertyPath="SalesOrderRequestItem"/><PropertyValue Bool="false" Property="Descending"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__UI.SelectionFields">
+					<Collection>
+						<PropertyPath>SalesOrderRequestItem</PropertyPath>
+					</Collection>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftEntityType"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Entity ID" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/CreatedByUser"><Annotation Path="CreatedByUserDescription" Term="SAP__common.Text"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Draft Created By" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/LastChangedByUser"><Annotation Path="LastChangedByUserDescription" Term="SAP__common.Text"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Draft Last Changed By" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftAccessType"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Access Type" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/InProcessByUser"><Annotation Path="InProcessByUserDescription" Term="SAP__common.Text"/><Annotation Term="SAP__common.IsUpperCase"/><Annotation String="Draft In Process By" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsKeptByUser"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Is Kept By User" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsCreatedByMe"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Created By Me" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsLastChangedByMe"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Last Changed By Me" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftIsProcessedByMe"><Annotation Term="SAP__common.IsUpperCase"/><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft In Process By Me" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType"><Annotation String="Draft Administration Data" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.Container/I_DraftAdministrativeData">
+				<Annotation Term="SAP__capabilities.SearchRestrictions">
+					<Record><PropertyValue Bool="true" Property="Searchable"/><PropertyValue EnumMember="SAP__capabilities.SearchExpressions/AND SAP__capabilities.SearchExpressions/OR SAP__capabilities.SearchExpressions/NOT SAP__capabilities.SearchExpressions/group SAP__capabilities.SearchExpressions/phrase" Property="UnsupportedExpressions"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.InsertRestrictions">
+					<Record><PropertyValue Bool="false" Property="Insertable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.DeleteRestrictions">
+					<Record><PropertyValue Bool="false" Property="Deletable"/></Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.UpdateRestrictions">
+					<Record><PropertyValue Bool="false" Property="Updatable"/>
+						<PropertyValue Property="QueryOptions">
+							<Record><PropertyValue Bool="true" Property="SelectSupported"/></Record>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+				<Annotation Term="SAP__capabilities.FilterRestrictions">
+					<Record>
+						<PropertyValue Property="FilterExpressionRestrictions">
+							<Collection>
+								<Record><PropertyValue Property="Property" PropertyPath="DraftEntityType"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="CreatedByUser"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="LastChangedByUser"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="DraftAccessType"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="InProcessByUser"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="DraftIsKeptByUser"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="DraftIsCreatedByMe"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="DraftIsLastChangedByMe"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+								<Record><PropertyValue Property="Property" PropertyPath="DraftIsProcessedByMe"/><PropertyValue Property="AllowedExpressions" String="MultiValue"/></Record>
+							</Collection>
+						</PropertyValue>
+					</Record>
+				</Annotation>
+			</Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestItemType/_SalesOrderRequest"><Annotation Term="SAP__UI.HiddenFilter"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/DraftUUID"><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft (Technical ID)" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/ProcessingStartDateTime"><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft In Process Since" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/EnqueueStartDateTime"><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Locked Since" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/CreatedByUserDescription"><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Created By (Description)" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/LastChangedByUserDescription"><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft Last Changed By (Description)" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/InProcessByUserDescription"><Annotation Term="SAP__UI.Hidden"/><Annotation String="Draft In Process By (Description)" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/SalesOrderRequestFileName"><Annotation String="File Name" Term="SAP__common.Label"/><Annotation String="Name of Uploaded File in Sales Order Request" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/PurchaseOrderByCustomer"><Annotation String="Customer Reference" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestType/RequestedDeliveryDate"><Annotation String="Requested Delivery Date" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.SalesOrderRequestDerivedItemType/ConfirmedDeliveryDate"><Annotation String="Confirmed Delivery Date" Term="SAP__common.Label"/><Annotation String="Confirmed Schedule Line Date" Term="SAP__common.QuickInfo"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/CreationDateTime"><Annotation String="Draft Created On" Term="SAP__common.Label"/></Annotations>
+			<Annotations Target="SAP__self.I_DraftAdministrativeDataType/LastChangeDateTime"><Annotation String="Draft Last Changed On" Term="SAP__common.Label"/></Annotations>
+		</Schema>
+	</edmx:DataServices>
+</edmx:Edmx>

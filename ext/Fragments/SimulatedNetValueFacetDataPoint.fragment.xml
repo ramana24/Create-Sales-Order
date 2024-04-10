@@ -1,0 +1,30 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition
+	xmlns="sap.m"
+	xmlns:core="sap.ui.core"
+>
+	<VBox id="CustomizedSimulatedNetValueFacetPoint" displayInline="true">
+				<Title
+				id="CustomizedSimulatedNetValueFacetTitle"
+				level="H3"
+				text="{i18n>simulatedNetValueFacetTitle}"
+				class="sapUiTinyMarginBottom"
+				visible="true"/>
+				<ObjectNumber
+				    core:require="{handler: 'cus/sd/so/create/auto/xtrctns1/ext/controller/OPExtController'}"
+					class="sapMObjectNumberLarge"
+					number="{
+							parts:[{path:'TotalNetAmount'},{path:'SalesOrderReqSimulationStatus'},{path:'TransactionCurrency'}],
+							type: 'sap.ui.model.type.Currency',
+							formatOptions: {showMeasure: false},
+							formatter: 'handler.buildDisplayText'
+						}"
+					id="CustomizedSimulatedNetValueFacetNumber"
+					emphasized="false"
+					state="{path:'SlsOrdReqSmltdAmtDiffCritlty', formatter: 'handler.buildExpressionForCriticality'}"/>
+	</VBox>
+</core:FragmentDefinition>

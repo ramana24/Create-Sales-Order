@@ -1,0 +1,13 @@
+{
+  "application": "cus.sd.so.create.auto.xtrctns1",
+  "version": "9.0.13",
+  "buildNumber": "19",
+  "buildId": "19",
+  "branch": "detached",
+  "revision": "70539b5ee9b2555cea2b2c8f290523ceb39e2f91",
+  "GitURL": "",
+  "buildStatus": "${env.buildStatus}",
+  "translationComplete": "${env.translationComplete}",
+  "cidi": "${env.cidi}",
+  "cfdCM": "${env.cfdCM}"
+}

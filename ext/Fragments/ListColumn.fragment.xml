@@ -1,0 +1,25 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns:m="sap.m" xmlns="sap.suite.ui.commons" xmlns:l="sap.ui.layout">
+	<l:VerticalLayout id="VLayout" core:require="{handler: 'cus/sd/so/create/auto/xtrctns1/ext/controller/MicroProcessController'}">
+		<!--<Button text="Custom Button" press="handler.buttonPressed"/>-->
+		<MicroProcessFlow id="StatusFlow" renderType="NoWrap">
+		<content>
+			<MicroProcessFlowItem id="ExtractedStatus" icon="{path:'SalesOrderReqExtractionStatus', formatter:'handler.setExtractionIcon'}"
+				title="{i18n>extractionStatusTooltip}" press="handler.itemPress"
+				state="{path:'SalesOrderReqExtractionStatus', formatter:'handler.setExtractionStatus'}"/>
+				
+			<MicroProcessFlowItem id="CompletenessStatus" icon="{path:'SlsOrdReqDataCmpltnsStatus', formatter:'handler.setCompletenessIcon'}"
+				title="{i18n>completenessStatusTooltip}" press="handler.itemPress"
+				state="{path:'SlsOrdReqDataCmpltnsStatus', formatter:'handler.setCompletenessStatus'}"/>
+				
+			<MicroProcessFlowItem id="OrderCreationStatus" icon="{path:'SalesOrderCreationStatus', formatter:'handler.setCreationIcon'}"
+				title="{i18n>creationStatusTooltip}" press="handler.itemPress"
+				state="{path:'SalesOrderCreationStatus', formatter:'handler.setCreationStatus'}"/>
+		</content>
+	</MicroProcessFlow>
+	</l:VerticalLayout>
+</core:FragmentDefinition>

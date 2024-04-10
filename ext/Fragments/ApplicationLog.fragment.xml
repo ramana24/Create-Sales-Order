@@ -1,0 +1,15 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog id="Dialog" title="{i18n>applicationLogDialogTitle}" contentHeight="45%" contentWidth="60%" draggable="true" resizable="true">
+		<Page id="ApplicationLogPage" showHeader="false">
+			<core:ComponentContainer id="LogMessagesControlContainer" height="100%"/>
+		</Page>
+		<endButton>
+			<Button id="LogCloseBtn" text="{i18n>close}" press="onLogButtonClose"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>

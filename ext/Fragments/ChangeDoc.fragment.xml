@@ -1,0 +1,13 @@
+<!--
+
+    Copyright (C) 2009-2021 SAP SE or an SAP affiliate company. All rights reserved.
+
+-->
+<core:FragmentDefinition xmlns:core="sap.ui.core" xmlns="sap.m">
+	<Dialog id="ChangDocDialog" title="{i18n>changeDocDialogTitle}" contentWidth="60%" draggable="true" resizable="true">
+		<core:ComponentContainer id="ChangeDocControlContainer" height="100%" />
+		<endButton>
+			<Button id="ChangeDocCloseBtn" text="{i18n>close}" press="onChangDocButtonClose"/>
+		</endButton>
+	</Dialog>
+</core:FragmentDefinition>
